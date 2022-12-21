@@ -25,9 +25,7 @@ const Projects = ({ projects }: ProjectsProps) => {
           </Row>
           <Row>
             <Grid container>
-              <ProjectsBar
-                projects={projects}
-              />
+              {projects && <ProjectsBar projects={projects} />}
             </Grid>
           </Row>
         </Grid>

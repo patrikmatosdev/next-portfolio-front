@@ -7,14 +7,15 @@ import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import { getImage } from "../../../utils/utils";
 import { ProjectsProps } from "../../Projects/types";
+import { Container } from "./styles";
 
 export default function ProjectsBar({ projects }: ProjectsProps) {
-  return (
-    <ImageList style={{ width: "100%" }}>
+  return projects ? (
+    <Container>
       {projects?.map((item, idx) => (
         <ImageListItem key={`${idx}`}>
           <img
-            src={getImage(item.company).src}
+            src={getImage(item.company.toLocaleLowerCase()).src}
             alt={item.code}
             loading="lazy"
           />
@@ -32,6 +33,11 @@ export default function ProjectsBar({ projects }: ProjectsProps) {
           />
         </ImageListItem>
       ))}
-    </ImageList>
+    </Container>
+  ) : (
+    <div>
+      <span>Não foi possível buscar os dados.</span>
+      <span>Por favor, recarregue a página</span>
+    </div>
   );
 }
