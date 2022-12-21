@@ -20,8 +20,8 @@ export default function ProjectsBar({ projects }: ProjectsProps) {
             loading="lazy"
           />
           <ImageListItemBar
-            title={item.code}
-            subtitle={item.company}
+            title={`Projeto: ${item.code}`}
+            subtitle={`Cliente: ${item.company}`}
             actionIcon={
               <IconButton
                 sx={{ color: "rgba(255, 255, 255, 0.54)" }}
