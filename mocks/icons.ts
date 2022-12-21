@@ -9,8 +9,13 @@ import NextjsImg from "../src/assets/img/nextjs.png";
 import ReactnativeImg from "../src/assets/img/reactnative.png";
 import StyledcomponentsImg from "../src/assets/img/styled-components.png";
 import StorybookImg from "../src/assets/img/storybook.png";
+import { StaticImageData } from "next/image";
 
-const Icons = {
+interface Icon {
+  [x: string]: StaticImageData;
+}
+
+const Icons: Icon = {
   NODE: NodeImg,
   JENKINS: JenkinsImg,
   NEXTJS: NextjsImg,
