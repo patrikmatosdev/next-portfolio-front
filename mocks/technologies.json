@@ -1,0 +1,40 @@
+{
+  "thecnologies": [
+    {
+      "id": 1,
+      "code": "NODE"
+    },
+    {
+      "id": 2,
+      "code": "JENKINS"
+    },
+    {
+      "id": 3,
+      "code": "NEXTJS"
+    },
+    {
+      "id": 4,
+      "code": "REACT_NATIVE"
+    },
+    {
+      "id": 5,
+      "code": "STORYBOOK"
+    },
+    {
+      "id": 6,
+      "code": "MATERIAL_UI"
+    },
+    {
+      "id": 7,
+      "code": "JAVASCRIPT"
+    },
+    {
+      "id": 8,
+      "code": "CSS3"
+    },
+    {
+      "id": 9,
+      "code": "HTML5"
+    }
+  ]
+}

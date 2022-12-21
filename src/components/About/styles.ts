@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
+import { Grid } from "@mui/material";
 
-const Container = styled("div")(() => {
+const Container = styled(Grid)(() => {
   return {
     height: "100vh",
-    minHeight: "100vh",
-    background: "#fff",
+    padding: "30px 0px",
   };
 });
 
