@@ -9,6 +9,8 @@ import NextjsImg from "../src/assets/img/nextjs.png";
 import ReactnativeImg from "../src/assets/img/reactnative.png";
 import StyledcomponentsImg from "../src/assets/img/styled-components.png";
 import StorybookImg from "../src/assets/img/storybook.png";
+import ItauImg from "../src/assets/img/itau.jpg";
+import CvcImg from "../src/assets/img/cvc.jpg";
 import { StaticImageData } from "next/image";
 
 interface Icon {
@@ -27,6 +29,8 @@ const Icons: Icon = {
   JAVASCRIPT: JavascriptImg,
   CSS3: Css3Img,
   HTML5: Html5Img,
+  itau: ItauImg,
+  cvc: CvcImg,
 };
 
 export default Icons;
