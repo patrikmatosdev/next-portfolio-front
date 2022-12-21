@@ -3,9 +3,14 @@ import { Grid } from "@mui/material";
 
 const Container = styled(Grid)(() => {
   return {
-    height: "100vh",
     padding: "30px 0px",
   };
 });
 
-export { Container };
+const Row = styled(Grid)(() => {
+  return {
+    margin: "30px 0px",
+  };
+});
+
+export { Container, Row };

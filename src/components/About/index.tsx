@@ -1,16 +1,23 @@
 import { Grid } from "@mui/material";
+import Image from "next/image";
+import { getImage } from "../../utils/utils";
+import CardTechnologie from "../Cards/Technologie";
 import PageContainer from "../PageContainer";
-import { Container } from "./styles";
+import { Container, Row } from "./styles";
+import { AboutProps } from "./types";
 
-const About = () => {
+const About = ({ technologies }: AboutProps) => {
+  console.log("tech", technologies);
+
   return (
     <Grid>
       <PageContainer>
         <Container container direction="column" alignItems={"space-between"}>
-          <Grid item>
+          <Row item>
             <h1>Sobre</h1>
-          </Grid>
-          <Grid item>
+          </Row>
+
+          <Row item>
             <span>
               {`Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
@@ -30,10 +37,24 @@ const About = () => {
               exact original form, accompanied by English versions from the 1914
               translation by H. Rackham.`}
             </span>
-          </Grid>
-          <Grid item>
-            
-          </Grid>
+          </Row>
+
+          <Row item>
+            <Grid wrap="wrap" container justifyContent={"space-between"}>
+              {technologies?.map((tech) => {
+                return (
+                  <CardTechnologie key={tech.id}>
+                    <Image
+                      src={getImage(tech.code)}
+                      alt={tech.code}
+                      width={50}
+                      height={50}
+                    />
+                  </CardTechnologie>
+                );
+              })}
+            </Grid>
+          </Row>
         </Container>
       </PageContainer>
     </Grid>

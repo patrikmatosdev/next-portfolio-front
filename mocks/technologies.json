@@ -26,14 +26,22 @@
     },
     {
       "id": 7,
-      "code": "JAVASCRIPT"
+      "code": "STYLED_COMPONENTS"
     },
     {
       "id": 8,
-      "code": "CSS3"
+      "code": "GITLAB"
     },
     {
       "id": 9,
+      "code": "JAVASCRIPT"
+    },
+    {
+      "id": 10,
+      "code": "CSS3"
+    },
+    {
+      "id": 11,
       "code": "HTML5"
     }
   ]
