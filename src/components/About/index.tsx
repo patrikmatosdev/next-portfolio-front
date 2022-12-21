@@ -14,7 +14,7 @@ const About = ({ technologies }: AboutProps) => {
       <PageContainer>
         <Container container direction="column" alignItems={"space-between"}>
           <Row item>
-            <h1>Sobre</h1>
+            <h2>Sobre</h2>
           </Row>
 
           <Row item>

@@ -21,7 +21,7 @@ const Projects = ({ projects }: ProjectsProps) => {
       <PageContainer>
         <Grid container direction={"column"}>
           <Row item>
-            <h1>Projetos Participativos</h1>
+            <h2>Projetos Participativos</h2>
           </Row>
           <Row>
             <Grid container>
