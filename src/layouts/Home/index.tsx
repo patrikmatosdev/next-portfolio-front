@@ -6,6 +6,7 @@ import mock_thechnologie from "../../../mocks/technologies.json";
 import mock_projects from "../../../mocks/projects.json";
 import mock_experiences from "../../../mocks/experiences.json";
 import Projects from "../../components/Projects";
+import Experiences from "../../components/Experiences";
 
 const menuItems = ["Início", "Projetos", "Experiências"];
 
@@ -21,11 +22,7 @@ const HomePage = () => {
         projects={mock_projects.participative}
       />
       <Projects title="Projetos Pessoais" projects={mock_projects.folks} />
-      <Projects
-        background="#f3f3f3"
-        title="Experiências"
-        projects={mock_projects.folks}
-      />
+      <Experiences experiences={mock_experiences.experiences} />
     </Container>
   );
 };

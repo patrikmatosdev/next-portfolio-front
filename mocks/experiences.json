@@ -4,6 +4,25 @@
       "code": "DEV",
       "title": "Desenvolvedor frontend",
       "level": "Junior",
+      "company": "Opah It Consulting",
+      "href": "https://www.opah.com.br",
+      "project": "Plataforma Única",
+      "dates": {
+        "start": "2020",
+        "end": "2022"
+      },
+      "location": {
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil"
+      }
+    },
+    {
+      "code": "INFRA",
+      "title": "Desenvolvedor frontend",
+      "level": "Junior",
+      "company": "Opah It Consulting",
+      "href": "opah.com.br",
       "project": "Plataforma Única",
       "dates": {
         "start": "11/11/2011",
@@ -19,21 +38,8 @@
       "code": "INFRA",
       "title": "Desenvolvedor frontend",
       "level": "Junior",
-      "project": "Plataforma Única",
-      "dates": {
-        "start": "11/11/2011",
-        "end": "22/11/2022"
-      },
-      "location": {
-        "city": "São Paulo",
-        "state": "São Paulo",
-        "country": "Brasil"
-      }
-    },
-    {
-      "code": "INFRA",
-      "title": "Desenvolvedor frontend",
-      "level": "Junior",
+      "company": "Opah It Consulting",
+      "href": "https://localhost:3000",
       "project": "Plataforma Única",
       "dates": {
         "start": "11/11/2011",
@@ -49,6 +55,8 @@
         "code": "INFRA",
         "title": "Desenvolvedor frontend",
         "level": "Junior",
+        "company": "Opah It Consulting",
+        "href": "https://localhost:3000",
         "project": "Plataforma Única",
         "dates": {
           "start": "11/11/2011",
@@ -64,6 +72,8 @@
         "code": "INFRA",
         "title": "Desenvolvedor frontend",
         "level": "Junior",
+        "company": "Opah It Consulting",
+        "href": "https://localhost:3000",
         "project": "Plataforma Única",
         "dates": {
           "start": "11/11/2011",
