@@ -15,8 +15,8 @@ const Banner = () => {
           <Grid item>
             <Grid container direction="column">
               <Grid item>
-                <h1 style={{ fontSize: 42 }}>Desenvolvedor frontend</h1>
-                <h2 style={{ fontSize: 32 }}>React & React Native</h2>
+                <h1 style={{ fontSize: "4vw" }}>Desenvolvedor frontend</h1>
+                <h2 style={{ fontSize: "2vw" }}>React & React Native</h2>
               </Grid>
 
               <Grid item style={{ marginTop: 10 }}>

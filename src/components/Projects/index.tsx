@@ -6,17 +6,17 @@ import PageContainer from "../PageContainer";
 import { Highlight, Row } from "./styles";
 import { ProjectsProps } from "./types";
 
-const Projects = ({ projects, title }: ProjectsProps) => {
+const Projects = ({ projects, title, background }: ProjectsProps) => {
   console.log("projects", projects);
 
   return (
-    <Grid>
+    <Grid style={{ background: background }}>
       <PageContainer>
         <Grid
           container
           direction={"column"}
           justifyContent="space-around"
-          style={{ minHeight: "100vh", alignItems: "center" }}
+          style={{ minHeight: "90vh", alignItems: "center" }}
         >
           <Row item>
             <h2>{title}</h2>

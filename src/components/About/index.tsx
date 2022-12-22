@@ -12,14 +12,21 @@ const About = ({ technologies }: AboutProps) => {
   return (
     <Grid>
       <PageContainer>
-        <Container container direction="column" alignItems={"space-between"}>
+        <Container
+          container
+          direction="column"
+          justifyContent="space-around"
+          alignItems={"center"}
+        >
           <Row item>
             <h2>Sobre</h2>
           </Row>
 
           <Row item>
-            <span>
-              {`Contrary to popular belief, Lorem Ipsum is not simply random text.
+            <Grid container>
+              <Grid item>
+                <span>
+                  {`Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
               making it over 2000 years old. Richard McClintock, a Latin
               professor at Hampden-Sydney College in Virginia, looked up one of
@@ -36,21 +43,30 @@ const About = ({ technologies }: AboutProps) => {
               Finibus Bonorum et Malorum" by Cicero are also reproduced in their
               exact original form, accompanied by English versions from the 1914
               translation by H. Rackham.`}
-            </span>
+                </span>
+              </Grid>
+            </Grid>
           </Row>
 
           <Row item>
-            <Grid wrap="wrap" container justifyContent={"space-between"}>
+            <Grid
+              wrap="wrap"
+              spacing={3}
+              container
+              justifyContent={"space-between"}
+            >
               {technologies?.map((tech) => {
                 return (
-                  <CardTechnologie key={tech.id}>
-                    <Image
-                      src={getImage(tech.code)}
-                      alt={tech.code}
-                      width={50}
-                      height={50}
-                    />
-                  </CardTechnologie>
+                  <Grid item key={tech.id}>
+                    <CardTechnologie>
+                      <Image
+                        src={getImage(tech.code)}
+                        alt={tech.code}
+                        width={50}
+                        height={50}
+                      />
+                    </CardTechnologie>
+                  </Grid>
                 );
               })}
             </Grid>

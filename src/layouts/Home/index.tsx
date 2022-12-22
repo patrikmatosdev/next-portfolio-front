@@ -16,11 +16,16 @@ const HomePage = () => {
       <Banner />
       <About technologies={mock_thechnologie.thecnologies} />
       <Projects
-        title=" Projetos Participativos"
+        title="Projetos Participativos"
+        background="#f3f3f3"
         projects={mock_projects.participative}
       />
       <Projects title="Projetos Pessoais" projects={mock_projects.folks} />
-      <Projects title="Experiências" projects={mock_projects.folks} />
+      <Projects
+        background="#f3f3f3"
+        title="Experiências"
+        projects={mock_projects.folks}
+      />
     </Container>
   );
 };
