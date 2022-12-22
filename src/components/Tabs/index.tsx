@@ -40,24 +40,24 @@ export default function TabsExperiences({ experiences }: TabExperienceProps) {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <CustomTab label="Infraestrutura" />
           <CustomTab label="Desenvolvimento" />
+          <CustomTab label="Infraestrutura" />
         </Tabs>
       </Header>
 
       <TabPanel value={value} index={0}>
         {experiences?.map((panel, idx) => {
           return (
-            panel.code === "INFRA" && (
-              <div key={idx}>{JSON.stringify(panel)}</div>
-            )
+            panel.code === "DEV" && <div key={idx}>{JSON.stringify(panel)}</div>
           );
         })}
       </TabPanel>
       <TabPanel value={value} index={1}>
         {experiences?.map((panel, idx) => {
           return (
-            panel.code === "DEV" && <div key={idx}>{JSON.stringify(panel)}</div>
+            panel.code === "INFRA" && (
+              <div key={idx}>{JSON.stringify(panel)}</div>
+            )
           );
         })}
       </TabPanel>
