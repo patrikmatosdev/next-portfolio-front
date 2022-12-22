@@ -4,14 +4,14 @@ import PageContainer from "../PageContainer";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Chip from "@mui/material/Chip";
 import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import { ExperiencesProps } from "./types";
 
-const Experiences = ({ experiences }: any) => {
+const Experiences = ({ experiences }: ExperiencesProps) => {
   return (
     <Grid>
       <PageContainer>
@@ -25,8 +25,8 @@ const Experiences = ({ experiences }: any) => {
           <Grid item xl={12} style={{ textAlign: "center" }}>
             <h2>Experiências</h2>
           </Grid>
-          <Grid item xl={10}>
-            {experiences.map((e, idx) => {
+          <Grid item xl={12}>
+            {experiences?.map((e, idx) => {
               return (
                 <Accordion
                   key={idx}
@@ -45,7 +45,7 @@ const Experiences = ({ experiences }: any) => {
                     id="panel1a-header"
                   >
                     <h4>
-                      {e.title} @ {e.company}
+                      {e.title} - {e.level} @ {e.company}
                     </h4>
                   </AccordionSummary>
                   <AccordionDetails
@@ -84,7 +84,7 @@ const Experiences = ({ experiences }: any) => {
                             <Grid item>
                               <CalendarMonthOutlinedIcon />
                             </Grid>
-                            <Grid item style={{ height: 22 }}>
+                            <Grid item style={{ height: 22, marginLeft: 8 }}>
                               <span>{`${e.dates.start} - ${e.dates.end}`}</span>
                             </Grid>
                           </Grid>
@@ -94,29 +94,16 @@ const Experiences = ({ experiences }: any) => {
 
                     <Grid container style={{ marginTop: 18, paddingLeft: 10 }}>
                       <Grid item>
-                        <span>
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industry's standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make a type specimen book. It has
-                          survived not only five centuries, but also the leap
-                          into electronic typesetting, remaining essentially
-                          unchanged. It was popularised in the 1960s with the
-                          release of Letraset sheets containing Lorem Ipsum
-                          passages, and more recently with desktop publishing
-                          software like Aldus PageMaker including versions of
-                          Lorem Ipsum.
-                        </span>
+                        <span>{e.text}</span>
                       </Grid>
                     </Grid>
                     <Grid container spacing={1} style={{ marginTop: 18 }}>
-                      {Array.from({ length: 10 }).map((a, idx) => {
+                      {e.technologies.map((tec, idx) => {
                         return (
                           <Grid item key={idx}>
                             <Chip
                               style={{ background: "#000", color: "#fff" }}
-                              label="ReactJS"
+                              label={tec}
                             />
                           </Grid>
                         );

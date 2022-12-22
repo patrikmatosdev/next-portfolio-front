@@ -3,87 +3,164 @@
     {
       "code": "DEV",
       "title": "Desenvolvedor frontend",
-      "level": "Junior",
+      "level": "Sênior",
       "company": "Opah It Consulting",
       "href": "https://www.opah.com.br",
-      "project": "Plataforma Única",
+      "project": "IUPP",
       "dates": {
-        "start": "2020",
+        "start": "2021",
         "end": "2022"
       },
       "location": {
         "city": "São Paulo",
         "state": "São Paulo",
         "country": "Brasil"
-      }
+      },
+      "technologies": [
+        "ReactJS",
+        "Styled-Components",
+        "Redux",
+        "MaterialUI",
+        "Javascript",
+        "HTM5",
+        "CSS3"
+      ],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     },
     {
-      "code": "INFRA",
+      "code": "DEV",
       "title": "Desenvolvedor frontend",
-      "level": "Junior",
+      "level": "Pleno",
       "company": "Opah It Consulting",
-      "href": "opah.com.br",
-      "project": "Plataforma Única",
+      "href": "https://www.opah.com.br",
+      "project": "IUPP",
       "dates": {
-        "start": "11/11/2011",
-        "end": "22/11/2022"
+        "start": "2021",
+        "end": "2021"
       },
       "location": {
         "city": "São Paulo",
         "state": "São Paulo",
         "country": "Brasil"
-      }
+      },
+      "technologies": [
+        "ReactJS",
+        "Styled-Components",
+        "Redux",
+        "MaterialUI",
+        "Javascript",
+        "HTM5",
+        "CSS3"
+      ],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     },
     {
-      "code": "INFRA",
+      "code": "DEV",
       "title": "Desenvolvedor frontend",
       "level": "Junior",
       "company": "Opah It Consulting",
-      "href": "https://localhost:3000",
+      "href": "https://www.opah.com.br",
       "project": "Plataforma Única",
       "dates": {
-        "start": "11/11/2011",
-        "end": "22/11/2022"
+        "start": "2019",
+        "end": "2021"
       },
       "location": {
         "city": "São Paulo",
         "state": "São Paulo",
         "country": "Brasil"
-      }
+      },
+      "technologies": [
+        "ReactJS",
+        "Styled-Components",
+        "Redux",
+        "MaterialUI",
+        "Javascript",
+        "HTM5",
+        "CSS3"
+      ],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     },
     {
-        "code": "INFRA",
-        "title": "Desenvolvedor frontend",
-        "level": "Junior",
-        "company": "Opah It Consulting",
-        "href": "https://localhost:3000",
-        "project": "Plataforma Única",
-        "dates": {
-          "start": "11/11/2011",
-          "end": "22/11/2022"
-        },
-        "location": {
-          "city": "São Paulo",
-          "state": "São Paulo",
-          "country": "Brasil"
-        }
+      "code": "DEV",
+      "title": "Analista de redes",
+      "level": "Pleno",
+      "company": "Action telecom",
+      "href": "https://www.opah.com.br",
+      "project": "Plataforma Única",
+      "dates": {
+        "start": "2019",
+        "end": "2021"
       },
-      {
-        "code": "INFRA",
-        "title": "Desenvolvedor frontend",
-        "level": "Junior",
-        "company": "Opah It Consulting",
-        "href": "https://localhost:3000",
-        "project": "Plataforma Única",
-        "dates": {
-          "start": "11/11/2011",
-          "end": "22/11/2022"
-        },
-        "location": {
-          "city": "São Paulo",
-          "state": "São Paulo",
-          "country": "Brasil"
-        }
-      }
+      "location": {
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil"
+      },
+      "technologies": [
+        "ReactJS",
+        "Styled-Components",
+        "Redux",
+        "MaterialUI",
+        "Javascript",
+        "HTM5",
+        "CSS3"
+      ],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "code": "DEV",
+      "title": "Analista de redes",
+      "level": "Pleno",
+      "company": "Amazonett",
+      "href": "https://www.opah.com.br",
+      "project": "Plataforma Única",
+      "dates": {
+        "start": "2019",
+        "end": "2021"
+      },
+      "location": {
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil"
+      },
+      "technologies": [
+        "ReactJS",
+        "Styled-Components",
+        "Redux",
+        "MaterialUI",
+        "Javascript",
+        "HTM5",
+        "CSS3"
+      ],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "code": "DEV",
+      "title": "Analista de redes",
+      "level": "Junior",
+      "company": "Intlink",
+      "href": "https://www.opah.com.br",
+      "project": "Plataforma Única",
+      "dates": {
+        "start": "2019",
+        "end": "2021"
+      },
+      "location": {
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil"
+      },
+      "technologies": [
+        "ReactJS",
+        "Styled-Components",
+        "Redux",
+        "MaterialUI",
+        "Javascript",
+        "HTM5",
+        "CSS3"
+      ],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
   ]
 }
