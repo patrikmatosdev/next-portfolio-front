@@ -1,10 +1,9 @@
 import Grid from "@mui/material/Grid";
 import Card from "../Cards/Card";
 import PageContainer from "../PageContainer";
-import TabsExperiences from "../Tabs";
-import { TabExperienceProps } from "../Tabs/types";
+import { ExperiencesProps } from "./types";
 
-const Experiences = ({ experiences }: TabExperienceProps) => {
+const Experiences = ({ experiences }: ExperiencesProps) => {
   return (
     <Grid>
       <PageContainer>
