@@ -1,11 +1,25 @@
 {
-  "projects": [
+  "participative": [
     {
       "code": "Iupp (Programa de pontos do itaú)",
       "company": "itau"
     },
     {
       "code": "Multiparceiros",
+      "company": "cvc"
+    }
+  ],
+  "folks": [
+    {
+      "code": "Alagym (Front)",
+      "company": "itau"
+    },
+    {
+      "code": "Alagym (Backend)",
+      "company": "cvc"
+    },
+    {
+      "code": "Portfólio (Versão 1.0)",
       "company": "cvc"
     }
   ]

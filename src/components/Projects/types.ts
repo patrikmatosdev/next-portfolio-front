@@ -5,4 +5,5 @@ export type Projects = {
 
 export interface ProjectsProps {
   projects?: Array<Projects>;
+  title?: string;
 }

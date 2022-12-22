@@ -1,0 +1,19 @@
+{
+  "experiences": [
+    {
+      "code": "DEV",
+      "title": "Desenvolvedor frontend",
+      "level": "Junior",
+      "project": "Plataforma Única",
+      "dates": {
+        "start": "11/11/2011",
+        "end": "22/11/2022"
+      },
+      "location": {
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil"
+      }
+    }
+  ]
+}
