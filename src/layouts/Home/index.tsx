@@ -6,9 +6,8 @@ import mock_thechnologie from "../../../mocks/technologies.json";
 import mock_projects from "../../../mocks/projects.json";
 import mock_experiences from "../../../mocks/experiences.json";
 import Projects from "../../components/Projects";
-import Experiences from "../../components/Experiences";
 
-const menuItems = ["Inicio", "Projetos", "Experiências", "Contato"];
+const menuItems = ["Início", "Projetos", "Experiências"];
 
 const HomePage = () => {
   return (
@@ -16,9 +15,12 @@ const HomePage = () => {
       <Menu items={menuItems} />
       <Banner />
       <About technologies={mock_thechnologie.thecnologies} />
-      <Projects title="Participativos" projects={mock_projects.participative} />
-      <Projects title="Pessoais" projects={mock_projects.folks} />
-      <Experiences experiences={mock_experiences.experiences} />
+      <Projects
+        title=" Projetos Participativos"
+        projects={mock_projects.participative}
+      />
+      <Projects title="Projetos Pessoais" projects={mock_projects.folks} />
+      <Projects title="Experiências" projects={mock_projects.folks} />
     </Container>
   );
 };

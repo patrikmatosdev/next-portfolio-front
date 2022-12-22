@@ -1,10 +1,10 @@
 import { styled } from "@mui/system";
-import Grid from "@mui/material/Grid";
 
-const Container = styled(Grid)(() => {
+const Container = styled("div")(() => {
   return {
     height: "40vh",
     background: "#000",
+    color: "#fff",
   };
 });
 

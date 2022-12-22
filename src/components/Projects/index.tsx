@@ -12,11 +12,16 @@ const Projects = ({ projects, title }: ProjectsProps) => {
   return (
     <Grid>
       <PageContainer>
-        <Grid container direction={"column"}>
+        <Grid
+          container
+          direction={"column"}
+          justifyContent="space-around"
+          style={{ minHeight: "100vh", alignItems: "center" }}
+        >
           <Row item>
-            <h2>{`Projetos ${title}`}</h2>
+            <h2>{title}</h2>
           </Row>
-          <Row>
+          <Row item>
             <Grid container>
               {projects && <ProjectsBar projects={projects} />}
             </Grid>
