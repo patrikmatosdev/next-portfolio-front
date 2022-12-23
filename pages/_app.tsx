@@ -1,6 +1,15 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <title>Portóflio Patrik - V2.0</title>
+        <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }

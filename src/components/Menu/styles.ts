@@ -3,7 +3,8 @@ import Grid from "@mui/material/Grid";
 
 const Container = styled("div")(() => {
   return {
-    background: "#ffff",
+    background: "#1c0113",
+    color:"white"
   };
 });
 

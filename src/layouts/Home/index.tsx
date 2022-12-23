@@ -1,28 +1,29 @@
-import About from "../../components/About";
+import About from "../../sections/About";
 import Banner from "../../components/Banner";
 import Menu from "../../components/Menu";
 import { Container } from "./styles";
 import mock_thechnologie from "../../../mocks/technologies.json";
 import mock_projects from "../../../mocks/projects.json";
 import mock_experiences from "../../../mocks/experiences.json";
-import Projects from "../../components/Projects";
-import Experiences from "../../components/Experiences";
+import Projects from "../../sections/Projects";
+import Experiences from "../../sections/Experiences";
+import { Project } from "../../sections/Projects/types";
+import { Thechnologie } from "../../sections/About/types";
 
-const menuItems = ["Início", "Projetos", "Experiências"];
+export interface HomePageProps {
+  projects?: Array<Project>;
+  experiences?: Array<Project>;
+  thecnologies?: Array<Thechnologie>;
+}
 
-const HomePage = () => {
+const HomePage = ({ projects, experiences, thecnologies }: HomePageProps) => {
   return (
     <Container>
-      <Menu items={menuItems} />
+      <Menu items={["Início", "Porfólio", "Experiências"]} />
       <Banner />
-      <About technologies={mock_thechnologie.thecnologies} />
-      <Projects
-        title="Projetos Participativos"
-        background="#f3f3f3"
-        projects={mock_projects.participative}
-      />
-      <Projects title="Projetos Pessoais" projects={mock_projects.folks} />
-      <Experiences experiences={mock_experiences.experiences} />
+      <About technologies={thecnologies} />
+      <Projects projects={experiences} />
+      <Experiences experiences={projects} />
     </Container>
   );
 };

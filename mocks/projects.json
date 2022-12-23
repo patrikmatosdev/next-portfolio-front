@@ -1,26 +1,51 @@
 {
-  "participative": [
+  "projects": [
     {
+      "index": 1,
       "code": "Iupp (Programa de pontos do itaú)",
-      "company": "itau"
+      "company": "Itaú",
+      "href": "https://www.iupp.com.br/",
+      "img": "https://t2.tudocdn.net/597012?w=1920",
+      "description": "Comparado as plataformas de viagens que já existem (123milhas ou Max Milhas). Desenvolvemos uma nova plataforma para os clientes do Itaú, seus objetivos são fornecer uma facilindexade de compras de viagens, pacotes, alugueis de carro e hotéis, através de pontos ou em real. "
     },
     {
+      "index:": 2,
       "code": "Multiparceiros",
-      "company": "cvc"
-    }
-  ],
-  "folks": [
-    {
-      "code": "Alagym (Front)",
-      "company": "itau"
+      "company": "CVC",
+      "href": null,
+      "img": "https://noticiasconcursos.com.br/wp-content/uploads/2022/05/noticiasconcursos.com.br-cvc-viagens-tem-vagas-de-emprego-pelo-pais-cvc-viagens.jpg",
+      "description": "Comparado as plataformas de viagens que já existem (123milhas ou Max Milhas). Desenvolvemos uma nova plataforma para os clientes do Itaú, seus objetivos são fornecer uma facilindexade de compras de viagens, pacotes, alugueis de carro e hotéis, através de pontos ou em real."
     },
     {
-      "code": "Alagym (Backend)",
-      "company": "cvc"
+      "index": 3,
+      "code": "Plataforma Única de Negócios",
+      "company": "CREFISA",
+      "img": "https://canalconsultapublica.com.br/wp-content/uploads/2022/10/crefisa-credito-para-negativado.jpg",
+      "description": "Uma plataforma unificada para os colaboradores da Crefisa que lhes permite dar suporte a qualquer cliente do banco digital, também é possível realizar transferências, empréstimos, pagamentos e todas as funções que um banco digital fornece."
     },
     {
-      "code": "Portfólio (Versão 1.0)",
-      "company": "cvc"
+      "index": 4,
+      "code": "Alagym (React Native)",
+      "company": "PESSOAL",
+      "href": "https://github.com/patrikmatosdev/alagym-react-native-1.0",
+      "img": "https://t2.tudocdn.net/510706?w=646&h=284",
+      "description": "Front-end criado para melhorar a experiência dos usuários de uma academia de ginástica e musculação. Telas que mostram os treinos do aluno e também permitem que professores e personal trainers editem os treinos de seus alunos. Além disso, os personal trainers podem visualizar e editar os treinos do aluno que quiser."
+    },
+    {
+      "index": 5,
+      "code": "Alagym (API)",
+      "company": "PESSOAL",
+      "href": "https://github.com/patrikmatosdev/alagym-api",
+      "img": "https://t2.tudocdn.net/510706?w=646&h=284",
+      "description": "Backend criado para retornar a listas de exercícios para seus respecitivos alunos. Nelas estão sendo retornanda um mock de lista, simulando um backend para integrar com as telas do aplicativo Alagym"
+    },
+    {
+      "index": 6,
+      "code": "Portfólio Primeira Versão (React)",
+      "company": "PESSOAL",
+      "href": "https://patrikmatosdev.github.io/my-portfolio/",
+      "img": "https://t2.tudocdn.net/510706?w=646&h=284",
+      "description": "Comparado as plataformas de viagens que já existem (123milhas ou Max Milhas). Desenvolvemos uma nova plataforma para os clientes do Itaú, seus objetivos são fornecer uma facilindexade de compras de viagens, pacotes, alugueis de carro e hotéis, através de pontos ou em real. "
     }
   ]
 }
