@@ -1,29 +1,26 @@
+import React, { useContext } from "react";
 import About from "../../sections/About";
 import Banner from "../../components/Banner";
 import Menu from "../../components/Menu";
 import { Container } from "./styles";
-import mock_thechnologie from "../../../mocks/technologies.json";
-import mock_projects from "../../../mocks/projects.json";
-import mock_experiences from "../../../mocks/experiences.json";
 import Projects from "../../sections/Projects";
 import Experiences from "../../sections/Experiences";
 import { Project } from "../../sections/Projects/types";
 import { Thechnologie } from "../../sections/About/types";
+import { HomeContext } from "../../contexts/ContextProvider";
 
-export interface HomePageProps {
-  projects?: Array<Project>;
-  experiences?: Array<Project>;
-  thecnologies?: Array<Thechnologie>;
-}
+const HomePage = () => {
+  const ctx = useContext(HomeContext);
 
-const HomePage = ({ projects, experiences, thecnologies }: HomePageProps) => {
+  const { technologies, projects, experiences } = JSON.parse(ctx);
+
   return (
     <Container>
       <Menu items={["Início", "Porfólio", "Experiências"]} />
       <Banner />
-      <About technologies={thecnologies} />
-      <Projects projects={experiences} />
-      <Experiences experiences={projects} />
+      <About technologies={technologies} />
+      <Projects projects={projects} />
+      <Experiences experiences={experiences} />
     </Container>
   );
 };

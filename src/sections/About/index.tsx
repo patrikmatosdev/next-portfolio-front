@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { Grid, Avatar } from "@mui/material";
 import Image from "next/image";
 import { getImage } from "../../utils/utils";
