@@ -8,6 +8,7 @@ import Companys from "../../sections/Companys";
 import { Project } from "../../sections/Projects/types";
 import { Thechnologie } from "../../sections/About/types";
 import { HomeContext } from "../../contexts/ContextProvider";
+import Footer from "../../sections/Footer";
 
 const HomePage = () => {
   const ctx = useContext(HomeContext);
@@ -20,7 +21,8 @@ const HomePage = () => {
       <Banner />
       <About technologies={technologies} />
       <Companys experiences={experiences} />
-      <Projects projects={experiences}/>
+      <Projects projects={experiences} />
+      <Footer />
     </Container>
   );
 };
