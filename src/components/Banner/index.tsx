@@ -34,7 +34,7 @@ const Banner = () => {
               height: "auto",
             }}
           >
-            Ver meu trabalho
+            Baixar currículo
           </button>
         </Grid>
       </Grid>

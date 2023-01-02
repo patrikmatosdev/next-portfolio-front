@@ -1,6 +1,12 @@
 import styled from "@emotion/styled";
 import { Grid } from "@mui/material";
 
+const Section = styled("section")(() => {
+  return {
+    background: "#fff",
+  };
+});
+
 const Row = styled(Grid)(() => {
   return {};
 });
@@ -17,4 +23,4 @@ const Highlight = styled("div")(() => {
   };
 });
 
-export { Row, Highlight };
+export { Row, Highlight, Section };

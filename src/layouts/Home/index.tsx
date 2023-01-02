@@ -4,7 +4,7 @@ import Banner from "../../components/Banner";
 import Menu from "../../components/Menu";
 import { Container } from "./styles";
 import Projects from "../../sections/Projects";
-import Experiences from "../../sections/Experiences";
+import Companys from "../../sections/Companys";
 import { Project } from "../../sections/Projects/types";
 import { Thechnologie } from "../../sections/About/types";
 import { HomeContext } from "../../contexts/ContextProvider";
@@ -19,7 +19,7 @@ const HomePage = () => {
       {/* <Menu items={["Início", "Porfólio", "Experiências"]} /> */}
       <Banner />
       <About technologies={technologies} />
-      <Experiences experiences={experiences} />
+      <Companys experiences={experiences} />
       <Projects projects={experiences}/>
     </Container>
   );

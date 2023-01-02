@@ -8,7 +8,7 @@ import { Container, Section } from "./styles";
 import CardExperiences from "../../components/Cards/Experiences";
 import projects from "../../../mocks/projects.json";
 
-const Experiences = ({ experiences }: ExperiencesProps) => {
+const Companys = ({ experiences }: ExperiencesProps) => {
   return (
     <Section>
       <PageContainer>
@@ -36,4 +36,4 @@ const Experiences = ({ experiences }: ExperiencesProps) => {
   );
 };
 
-export default Experiences;
+export default Companys;

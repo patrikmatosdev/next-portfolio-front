@@ -3,8 +3,7 @@ import { Grid } from "@mui/material";
 
 const Section = styled("section")(() => {
   return {
-    background:
-      "linear-gradient(0deg, rgba(28,1,19,1) 0%, rgba(28,1,19,0.9612219887955182) 98%, rgba(255,255,255,1) 100%)",
+    background: "rgba(28,1,19,1)",
   };
 });
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Button, ZIndex, Card } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
-import { Row } from "./styles";
+import { Row, Section } from "./styles";
 import { Project, ProjectsProps } from "./types";
 import AlertDialogSlide from "../../components/Dialog";
 import Title from "../../components/Title";
@@ -37,7 +37,7 @@ const Projects = ({ projects }: ProjectsProps) => {
   }, [projects]);
 
   return (
-    <Grid style={{ background: "#f6f6f6" }}>
+    <Section>
       <PageContainer>
         <Grid
           container
@@ -77,7 +77,7 @@ const Projects = ({ projects }: ProjectsProps) => {
           />
         )}
       </PageContainer>
-    </Grid>
+    </Section>
   );
 };
 
