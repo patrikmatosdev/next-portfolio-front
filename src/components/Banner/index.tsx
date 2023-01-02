@@ -1,57 +1,43 @@
 import PageContainer from "../PageContainer";
 import Grid from "@mui/material/Grid";
 import Container from "./styles";
+import Image from "next/image";
+import BannerJpg from "../../assets/img/banner.jpg";
 
 const Banner = () => {
   return (
     <Container>
-      <PageContainer>
+      <Image fill alt={"banner-image"} src={BannerJpg} />
+      <Grid container style={{ position: "absolute" }}>
         <Grid
-          container
+          direction="column"
+          justifyContent="center"
           alignItems="center"
-          justifyContent="space-between"
-          style={{ height: "100%" }}
+          container
+          style={{
+            height: "100vh",
+            background: "rgba(28,1,19,0.9)",
+          }}
         >
-          <Grid item>
-            <Grid container direction="column">
-              <Grid item>
-                <h1 style={{ fontSize: "3vw" }}>Desenvolvedor frontend</h1>
-                <h2 style={{ fontSize: "2vw" }}>React & React Native</h2>
-              </Grid>
-
-              <Grid item style={{ marginTop: 10 }}>
-                <Grid container>
-                  <Grid item>
-                    <img
-                      src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                      alt="banner"
-                      width={40}
-                      height={40}
-                    />
-                  </Grid>
-                  <Grid item>
-                    <img
-                      src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                      alt="banner"
-                      width={40}
-                      height={40}
-                      style={{ marginLeft: 10 }}
-                    />
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/004/865/921/original/programmer-people-concept-use-laptop-and-programming-code-program-icon-spreading-with-modern-flat-style-free-vector.jpg"
-              alt="banner"
-              width={300}
-              height={200}
-            />
-          </Grid>
+          <span>
+            Olá, me chamo <strong>Patrik Matos</strong>.
+          </span>
+          <span>Sou um desenvolvedor frontend</span>
+          <button
+            style={{
+              marginTop: 40,
+              background: "transparent",
+              color: "white",
+              border: "3px solid #fff",
+              padding: "15px 70px",
+              fontSize: "14pt",
+              height: "auto",
+            }}
+          >
+            Ver meu trabalho
+          </button>
         </Grid>
-      </PageContainer>
+      </Grid>
     </Container>
   );
 };

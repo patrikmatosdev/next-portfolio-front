@@ -12,15 +12,15 @@ import { HomeContext } from "../../contexts/ContextProvider";
 const HomePage = () => {
   const ctx = useContext(HomeContext);
 
-  const { technologies, projects, experiences } = JSON.parse(ctx);
+  const { technologies, projects, experiences } = JSON.parse(ctx as string);
 
   return (
     <Container>
-      <Menu items={["Início", "Porfólio", "Experiências"]} />
+      {/* <Menu items={["Início", "Porfólio", "Experiências"]} /> */}
       <Banner />
       <About technologies={technologies} />
-      <Projects projects={projects} />
       <Experiences experiences={experiences} />
+      <Projects projects={experiences}/>
     </Container>
   );
 };

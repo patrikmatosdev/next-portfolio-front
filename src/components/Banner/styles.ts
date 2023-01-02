@@ -2,11 +2,24 @@ import { styled } from "@mui/system";
 
 const Container = styled("div")(() => {
   return {
-    height: "65vh",
-    background:
-      "linear-gradient(180deg, rgba(28,1,19,1) 0%, rgba(28,1,19,0.9612219887955182) 94%, rgba(255,255,255,1) 100%)",
+    maxWidth: "100%",
+    width: "100%",
+    height: "100vh",
+    position: "relative",
 
-    color: "#fff",
+    "& span": {
+      fontFamily: "Raleway",
+      color: "#fff",
+      fontSize: "32pt",
+      lineHeight: "36pt",
+    },
+
+    "& strong": {
+      fontFamily: "Raleway",
+      color: "#fff",
+      fontSize: "32pt",
+      lineHeight: "36pt",
+    },
   };
 });
 

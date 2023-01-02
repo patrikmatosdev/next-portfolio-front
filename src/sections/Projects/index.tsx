@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Grid } from "@mui/material";
-import ProjectsBar from "../../components/Cards/Projects";
+import { Grid, Button, ZIndex, Card } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import { Row } from "./styles";
 import { Project, ProjectsProps } from "./types";
 import AlertDialogSlide from "../../components/Dialog";
 import Title from "../../components/Title";
+import CardCompany from "../../components/Cards/Company";
 
 const Projects = ({ projects }: ProjectsProps) => {
+  const [cards, setCards] = useState<Array<Project>>([]);
   const [modalContent, setModalContent] = useState<Project | null>();
   const [controller, setController] = useState({
     open: false,
     selected: 0,
+    length: 3,
+    more: false,
   });
 
   useEffect(() => {
@@ -29,33 +32,38 @@ const Projects = ({ projects }: ProjectsProps) => {
     setModalContent(null);
   };
 
-  console.log("modaContent", modalContent);
+  useEffect(() => {
+    if (projects) setCards(projects);
+  }, [projects]);
 
   return (
-    <Grid style={{ background: "#f3f3f3" }}>
+    <Grid style={{ background: "#f6f6f6" }}>
       <PageContainer>
         <Grid
           container
           direction={"column"}
           justifyContent="space-around"
-          style={{ minHeight: "90vh" }}
+          style={{ minHeight: "100vh" }}
         >
           <Row item style={{ textAlign: "center" }}>
-            <Title label="Portfólio" />
+            <Title label="Experiências" />
           </Row>
           <Row item>
-            <Grid container>
-              {projects && (
-                <ProjectsBar
-                  projects={projects}
-                  onClickButton={(id) =>
-                    setController({
-                      open: true,
-                      selected: id,
-                    })
-                  }
-                />
-              )}
+            <Grid container justifyContent="center">
+              {cards &&
+                cards.map((card, key) => {
+                  console.log("card", card);
+                  return (
+                    <Grid style={{ margin: 10 }} key={key}>
+                      <CardCompany
+                        img={card.img}
+                        company={card.code}
+                        subheader={card.company}
+                        technologies={card.technologies}
+                      />
+                    </Grid>
+                  );
+                })}
             </Grid>
           </Row>
         </Grid>

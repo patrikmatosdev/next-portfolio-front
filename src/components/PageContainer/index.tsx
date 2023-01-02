@@ -12,6 +12,7 @@ const Container = styled(Grid)(() => {
     margin: "auto",
     height: "100% !important",
     background: "transpartent",
+    padding: 30,
   };
 });
 

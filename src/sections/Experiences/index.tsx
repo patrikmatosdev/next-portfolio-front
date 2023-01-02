@@ -2,32 +2,37 @@ import React from "react";
 import { Grid } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import { ExperiencesProps } from "./types";
-import ProjectsBar from "../../components/Cards/Projects";
 import mock from "../../../mocks/experiences.json";
 import Title from "../../components/Title";
+import { Container, Section } from "./styles";
+import CardExperiences from "../../components/Cards/Experiences";
+import projects from "../../../mocks/projects.json";
 
 const Experiences = ({ experiences }: ExperiencesProps) => {
   return (
-    <Grid>
+    <Section>
       <PageContainer>
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
-          style={{ height: "70vh", padding: "30px 0px" }}
-          spacing={2}
-        >
+        <Container alignItems="center" justifyContent="center">
           <Grid item xl={12} style={{ textAlign: "center" }}>
-            <Title label="Experiências" />
+            <Title color={"#fff"} label="Portfólio" />
           </Grid>
           <Grid item xl={12}>
-            <Grid container>
-              {experiences && <ProjectsBar projects={experiences} />}
+            <Grid container justifyContent="space-between">
+              <CardExperiences
+                experiences={projects.projects?.map((e) => {
+                  return {
+                    id: e.index,
+                    img: e.img,
+                    code: e.company,
+                  };
+                })}
+              />
+              ;
             </Grid>
           </Grid>
-        </Grid>
+        </Container>
       </PageContainer>
-    </Grid>
+    </Section>
   );
 };
 

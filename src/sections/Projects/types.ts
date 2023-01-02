@@ -5,6 +5,7 @@ export type Project = {
   href: string;
   img: string;
   description: string;
+  technologies: Array<string>;
 };
 
 export interface ProjectsProps {
