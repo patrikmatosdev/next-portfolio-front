@@ -19,7 +19,11 @@ const About = ({ technologies }: AboutProps) => {
           </Grid>
           <Grid container style={{ position: "relative" }}>
             <Grid item xl={6} sm={6} lg={6} xs={6} md={6}>
-              <Image src={AboutImage} style={{ width: "calc(100% + 10%)", bottom: 0 }} alt="sobre" />
+              <Image
+                src={AboutImage}
+                style={{ width: "calc(100% + 10%)", bottom: 0 }}
+                alt="sobre"
+              />
             </Grid>
             <Grid
               style={{ padding: "0px", zIndex: 99 }}

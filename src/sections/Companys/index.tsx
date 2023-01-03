@@ -28,9 +28,7 @@ export default function Companys({ companys }) {
                 <TimelineItem key={key}>
                   <TimelineSeparator>
                     <TimelineDot style={{ background: "rgba(28,1,19,0.9)" }} />
-                    {key !== companys.length - 1 && (
-                      <TimelineConnector />
-                    )}
+                    {key !== companys.length - 1 && <TimelineConnector />}
                   </TimelineSeparator>
                   <TimelineContent
                     display="flex"
@@ -46,16 +44,18 @@ export default function Companys({ companys }) {
                       {company.location.city} - {company.location.state}
                     </span>
                   </TimelineContent>
-                  <TimelineContent style={{ marginBottom: 100 }}>
+                  <TimelineContent
+                    style={{ marginBottom: 100, textAlign: "justify" }}
+                  >
                     <p>{company.description}</p>
                     <Grid style={{ marginTop: 10 }} container wrap="wrap">
-                      <strong>Tecnologias: </strong>
+                      <strong style={{ marginRight: 10 }}>Tecnologias: </strong>
                       {company.technologies.map((tec, idx) => {
                         return (
-                          <Grid style={{ margin: "0px 5px" }} item key={idx}>
+                          <Grid item key={idx}>
                             <span>{tec}</span>
                             {idx !== company.technologies.length - 1 && (
-                              <span>-</span>
+                              <span style={{ marginRight: 10 }}>-</span>
                             )}
                           </Grid>
                         );
