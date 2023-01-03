@@ -1,83 +1,128 @@
 import React, { useContext } from "react";
-import { Grid, Avatar } from "@mui/material";
+import { Grid, Slider } from "@mui/material";
 import Image from "next/image";
 import { getImage } from "../../utils/utils";
-import CardTechnologie from "../../components/Cards/Technologie";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
-import { Container, Row, Section } from "./styles";
+import { Section, SliderTec } from "./styles";
 import { AboutProps } from "./types";
+import AboutImage from "../../assets/img/about.jpg";
+import Stack from "@mui/material/Stack";
 
 const About = ({ technologies }: AboutProps) => {
   return (
     <Section>
       <PageContainer>
-        <Container>
+        <div>
           <Grid container justifyContent="center">
             <Title label="Sobre" />
           </Grid>
-
-          <Grid container alignItems="center">
-            <Grid item xl={6}>
-              <Grid container>
-                <span style={{ fontSize: "1.4rem" }}>
-                  {`Contrary to popular belief, Lorem Ipsum is not simply random text.
-                     It has roots in a piece of classical Latin literature from 45 BC,
-                     making it over 2000 years old. Richard McClintock, a Latin
-                     professor at Hampden-Sydney College in Virginia, looked up one of
-                     the more obscure Latin words, consectetur, from a Lorem Ipsum
-                     passage, and going through the cites of the word in classical
-                     literature, discovered the undoubtable source.
-                   `}
-
-                  <h4 style={{ margin: "20px 0px" }}>Tecnologias:</h4>
-
-                  <Grid wrap="wrap" spacing={3} container>
-                    {technologies?.map((tech) => {
-                      return (
-                        <Grid item key={tech.id}>
-                          <CardTechnologie>
-                            <Image
-                              src={getImage(tech.code)}
-                              alt={tech.code}
-                              width={30}
-                              height={30}
-                            />
-                          </CardTechnologie>
-                        </Grid>
-                      );
-                    })}
-                  </Grid>
-                </span>
-              </Grid>
+          <Grid container>
+            <Grid
+              style={{ padding: "0px 50px" }}
+              item
+              xl={6}
+              sm={6}
+              lg={6}
+              xs={6}
+              md={6}
+            >
+              <div style={{ position: "relative", width: "100%", height: 600 }}>
+                <Image src={AboutImage} fill alt="sobre" />
+              </div>
             </Grid>
+            <Grid
+              style={{ padding: "0px" }}
+              item
+              xl={6}
+              sm={6}
+              lg={6}
+              xs={6}
+              md={6}
+            >
+              <strong
+                style={{
+                  fontSize: "18pt",
+                  fontWeight: "lighter",
+                }}
+              >
+                Quem sou eu?
+              </strong>
+              <p
+                style={{
+                  margin: "20px 0px",
+                  fontSize: "14pt",
+                  fontWeight: "lighter",
+                  textAlign: "justify",
+                }}
+              >
+                Desenvolvedor Front-end com experiência de 3 anos em React.js,
+                Next.js, Redux, JavaScript, TypeScript, Styled Components,
+                Material UI e consumo de APIs REST. Apaixonado pelo
+                desenvolvimento de componentes reutilizáveis. Também possuo
+                experiência em projetos gerenciados por Metodologias Ágeis.
+                Formado em técnico em informática para internet.
+              </p>
+              <Grid container paddingTop={10}>
+                {technologies?.map((tec, key) => {
+                  return (
+                    <div
+                      key={key}
+                      style={{
+                        width: "100%",
+                        height: 28,
+                        position: "relative",
+                        background: "#eee",
+                        marginBottom: 15,
+                        display: "flex",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: 200,
+                          background: "#2b1724",
+                          color: "white",
+                          textAlign: "center",
+                          position: "absolute",
+                          top: 0,
+                          bottom: 0,
+                          left: 0,
+                          zIndex: 99,
+                        }}
+                      >
+                        {tec.code.replace("_", " ").toLocaleLowerCase()}
+                      </div>
+                      <div
+                        style={{
+                          width: "calc(100% - 10%)",
+                          background: "#1c0113",
+                          textAlign: "center",
+                          position: "absolute",
+                          top: 0,
+                          bottom: 0,
+                        }}
+                      />
 
-            <Grid item xl={6}>
-              <Grid container justifyContent="center">
-                <div
-                  style={{
-                    borderRadius: "10%",
-                    width: 280,
-                    height: 320,
-                    padding: 7,
-                    border: "6px dashed #1c0113",
-                    boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-                  }}
-                >
-                  <Avatar
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "10%",
-                    }}
-                    alt="Patrik Matos Image"
-                    src="https://media.licdn.com/dms/image/C4D03AQGAMKCrRB5WMg/profile-displayphoto-shrink_800_800/0/1628013986469?e=1677110400&v=beta&t=MKDJUUCOV6XT9tzyK7T6gaX_C3EFMmH-tqaQjL6ervo"
-                  />
-                </div>
+                      <div
+                        style={{
+                          width: "10%",
+                          color: "#1c0113",
+                          textAlign: "center",
+                          position: "absolute",
+                          top: 0,
+                          bottom: 0,
+                          right: 0,
+                        }}
+                      >
+                        <span>90%</span>
+                      </div>
+                    </div>
+                  );
+                })}
               </Grid>
             </Grid>
           </Grid>
-        </Container>
+        </div>
       </PageContainer>
     </Section>
   );

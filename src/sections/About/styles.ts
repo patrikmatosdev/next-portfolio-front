@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Grid } from "@mui/material";
+import { Grid, Slider } from "@mui/material";
 
 const Section = styled("section")(() => {
   return {
@@ -7,15 +7,14 @@ const Section = styled("section")(() => {
   };
 });
 
-const Container = styled(Grid)(() => {
+const SliderTec = styled("div")(() => {
   return {
-    height: "100vh",
-    maxHeight: "100vh",
+    width: "90%",
+    height: "100%",
+    padding: 0,
+    borderRadius: 0,
+    background: "rgba(28,1,19,0.9)",
   };
 });
 
-const Row = styled(Grid)(() => {
-  return {};
-});
-
-export { Section, Container, Row };
+export { Section, SliderTec };
