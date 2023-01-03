@@ -36,7 +36,7 @@ export default function ProjectsBar({
                 pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
               }}
             >
-              Ver mais
+              {experience.code}
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
           </Image>

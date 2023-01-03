@@ -6,6 +6,7 @@ import { Container } from "./styles";
 import { HomeContext } from "../../contexts/ContextProvider";
 import Footer from "../../sections/Footer";
 import Portfolio from "../../sections/Portfolio";
+import Companys from "../../sections/Companys";
 
 const HomePage = () => {
   const ctx = useContext(HomeContext);
@@ -17,7 +18,8 @@ const HomePage = () => {
       <Banner />
       <About technologies={technologies} />
       <Portfolio projects={projects} />
-      <Footer />;
+      <Companys companys={experiences} />
+      <Footer />
     </Container>
   );
 };

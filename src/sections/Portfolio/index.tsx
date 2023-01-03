@@ -2,7 +2,7 @@ import { Box, Tabs, Tab } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
 import { useState } from "react";
-import ProjectsBar from "../../components/Cards/ProjectsBar";
+import ProjectsBar from "../../components/ProjectsBar";
 
 const Portfolio = ({ projects }) => {
   const [tabContent, setTabContent] = useState(0);
@@ -32,7 +32,7 @@ const Portfolio = ({ projects }) => {
       <PageContainer>
         <div>
           <Title label="< Portfolio >" color="#fff" />
-          <Box sx={{ width: "100%", marginBottom: 8 }}>
+          <Box sx={{ width: "100%", marginBottom: 5 }}>
             <Box>
               <Tabs value={tabContent} onChange={(_e, n) => setTabContent(n)}>
                 <Tab
