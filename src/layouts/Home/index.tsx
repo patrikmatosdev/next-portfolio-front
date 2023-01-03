@@ -7,6 +7,7 @@ import { HomeContext } from "../../contexts/ContextProvider";
 import Footer from "../../sections/Footer";
 import Portfolio from "../../sections/Portfolio";
 import Companys from "../../sections/Companys";
+import Courses from "../../sections/Courses";
 
 const HomePage = () => {
   const ctx = useContext(HomeContext);

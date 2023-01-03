@@ -22,7 +22,7 @@ const Banner = () => {
           <span>
             Olá, me chamo <strong>Patrik Matos</strong>.
           </span>
-          <span>Sou um desenvolvedor frontend</span>
+          <span>Sou um desenvolvedor front-end</span>
           <button
             style={{
               marginTop: 40,

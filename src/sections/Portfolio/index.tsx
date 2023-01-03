@@ -28,11 +28,11 @@ const Portfolio = ({ projects }) => {
   console.log("tabCon", personals);
 
   return (
-    <section style={{ background: "rgba(28,1,19,1)" }}>
+    <section style={{ background: "rgba(28,1,19,1)", minHeight: "100vh" }}>
       <PageContainer>
         <div>
           <Title label="< Portfolio >" color="#fff" />
-          <Box sx={{ width: "100%", marginBottom: 5 }}>
+          <Box sx={{ width: "100%", marginBottom: 3 }}>
             <Box>
               <Tabs value={tabContent} onChange={(_e, n) => setTabContent(n)}>
                 <Tab
