@@ -27,7 +27,14 @@ const About = ({ technologies }: AboutProps) => {
               xs={6}
               md={6}
             >
-              <div style={{ position: "absolute", width: "100%", bottom: 0, left: 200 }}>
+              <div
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  bottom: 0,
+                  left: 200,
+                }}
+              >
                 {/* <Image src={AboutImage} width={500} height={400} alt="sobre" /> */}
               </div>
             </Grid>
@@ -82,8 +89,9 @@ const About = ({ technologies }: AboutProps) => {
                           width: 200,
                           background: "#2b1724",
                           color: "white",
-                          textAlign: "center",
+                          paddingLeft: 10,
                           position: "absolute",
+                          textTransform: "capitalize",
                           top: 0,
                           bottom: 0,
                           left: 0,
@@ -107,6 +115,7 @@ const About = ({ technologies }: AboutProps) => {
                         style={{
                           width: "10%",
                           color: "#1c0113",
+
                           textAlign: "center",
                           position: "absolute",
                           top: 0,
