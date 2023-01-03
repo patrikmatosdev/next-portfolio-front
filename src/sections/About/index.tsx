@@ -6,7 +6,7 @@ import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
 import { Section, SliderTec } from "./styles";
 import { AboutProps } from "./types";
-import AboutImage from "../../assets/img/about.jpg";
+import AboutImage from "../../assets/img/about.png";
 import Stack from "@mui/material/Stack";
 
 const About = ({ technologies }: AboutProps) => {
@@ -19,7 +19,7 @@ const About = ({ technologies }: AboutProps) => {
           </Grid>
           <Grid container>
             <Grid
-              style={{ padding: "0px 50px" }}
+              style={{ padding: "0px 50px", position: "relative" }}
               item
               xl={6}
               sm={6}
@@ -27,8 +27,8 @@ const About = ({ technologies }: AboutProps) => {
               xs={6}
               md={6}
             >
-              <div style={{ position: "relative", width: "100%", height: 600 }}>
-                <Image src={AboutImage} fill alt="sobre" />
+              <div style={{ position: "absolute", width: "100%", bottom: 0, left: 200 }}>
+                {/* <Image src={AboutImage} width={500} height={400} alt="sobre" /> */}
               </div>
             </Grid>
             <Grid
