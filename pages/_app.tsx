@@ -7,7 +7,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Portóflio Patrik - V2.0</title>
-        <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet" />
       </Head>
       <Component {...pageProps} />
     </>

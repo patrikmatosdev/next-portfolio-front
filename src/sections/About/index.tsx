@@ -1,105 +1,126 @@
 import React, { useContext } from "react";
-import { Grid, Avatar } from "@mui/material";
+import { Grid, Slider } from "@mui/material";
 import Image from "next/image";
 import { getImage } from "../../utils/utils";
-import CardTechnologie from "../../components/Cards/Technologie";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
-import { Container, Row } from "./styles";
+import { Section, SliderTec } from "./styles";
 import { AboutProps } from "./types";
+import AboutImage from "../../assets/img/about.svg";
+import Stack from "@mui/material/Stack";
 
 const About = ({ technologies }: AboutProps) => {
   return (
-    <Grid style={{ padding: "30px 0px" }}>
+    <Section>
       <PageContainer>
-        <Grid
-          container
-          style={{ padding: 30 }}
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Title label="Sobre" />
-        </Grid>
-
-        <Grid
-          style={{ height: "50vh" }}
-          container
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Grid item xl={6}>
-            <Container
-              container
-              justifyContent="space-around"
-              alignItems={"center"}
-              style={{ textAlign: "justify" }}
-            >
-              <Grid item xl={12}>
-                <span style={{ fontSize: 14 }}>
-                  {`Contrary to popular belief, Lorem Ipsum is not simply random text.
-                        It has roots in a piece of classical Latin literature from 45 BC,
-                        making it over 2000 years old. Richard McClintock, a Latin
-                        professor at Hampden-Sydney College in Virginia, looked up one of
-                        the more obscure Latin words, consectetur, from a Lorem Ipsum
-                        passage, and going through the cites of the word in classical
-                        literature, discovered the undoubtable source. Lorem Ipsum comes
-                        from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-                        Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-                        BC. This book is a treatise on the theory of ethics, very popular
-                        during the Renaissance. The first line of Lorem Ipsum, "Lorem
-                        ipsum dolor sit amet..", comes from a line in section 1.10.32. The
-                        standard chunk of Lorem Ipsum used since the 1500s is reproduced
-                        below for those interested. Sections 1.10.32 and 1.10.33 from "de
-                        Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-                        exact original form, accompanied by English versions from the 1914
-                        translation by H. Rackham.`}
-                </span>
-              </Grid>
-
-              <Grid item xl={12}>
-                <h4 style={{ padding: "30px 0px" }}>Habilidades</h4>
-
-                <Grid wrap="wrap" spacing={1} container>
-                  {technologies?.map((tech) => {
-                    return (
-                      <Grid item key={tech.id}>
-                        <CardTechnologie>
-                          <Image
-                            src={getImage(tech.code)}
-                            alt={tech.code}
-                            width={30}
-                            height={30}
-                          />
-                        </CardTechnologie>
-                      </Grid>
-                    );
-                  })}
-                </Grid>
-              </Grid>
-            </Container>
+        <div>
+          <Grid container justifyContent="center">
+            <Title label="<Sobre>" />
           </Grid>
-
-          <Grid item xl={6}>
-            <Grid container alignItems="center" justifyContent="center">
-              <div
+          <Grid container style={{ position: "relative" }}>
+            <Grid item xl={6} sm={6} lg={6} xs={6} md={6}>
+              <Image
+                src={AboutImage}
+                style={{ width: "calc(100% + 10%)", bottom: 0 }}
+                alt="sobre"
+              />
+            </Grid>
+            <Grid
+              style={{ padding: "0px", zIndex: 99 }}
+              item
+              xl={6}
+              sm={6}
+              lg={6}
+              xs={6}
+              md={6}
+            >
+              <strong
                 style={{
-                  borderRadius: "100%",
-                  padding: 10,
-                  border: "6px dashed #1c0113",
-                  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+                  fontSize: "18pt",
+                  fontWeight: "lighter",
                 }}
               >
-                <Avatar
-                  style={{ width: 280, height: 280 }}
-                  alt="Patrik Matos Image"
-                  src="https://media.licdn.com/dms/image/C4D03AQGAMKCrRB5WMg/profile-displayphoto-shrink_800_800/0/1628013986469?e=1677110400&v=beta&t=MKDJUUCOV6XT9tzyK7T6gaX_C3EFMmH-tqaQjL6ervo"
-                />
-              </div>
+                Quem sou eu?
+              </strong>
+              <p
+                style={{
+                  margin: "20px 0px",
+                  fontSize: "14pt",
+                  fontWeight: "lighter",
+                  textAlign: "justify",
+                }}
+              >
+                Desenvolvedor Front-end com experiência de 3 anos em React.js,
+                Next.js, Redux, JavaScript, TypeScript, Styled Components,
+                Material UI e consumo de APIs REST. Apaixonado pelo
+                desenvolvimento de componentes reutilizáveis. Também possuo
+                experiência em projetos gerenciados por Metodologias Ágeis.
+                Formado em técnico em informática para internet.
+              </p>
+              <Grid container paddingTop={10}>
+                {technologies?.map((tec, key) => {
+                  return (
+                    <div
+                      key={key}
+                      style={{
+                        width: "100%",
+                        height: 28,
+                        position: "relative",
+                        background: "#eee",
+                        marginBottom: 15,
+                        display: "flex",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: 200,
+                          background: "#2b1724",
+                          color: "white",
+                          paddingLeft: 10,
+                          position: "absolute",
+                          textTransform: "capitalize",
+                          top: 0,
+                          bottom: 0,
+                          left: 0,
+                          zIndex: 99,
+                        }}
+                      >
+                        {tec.code.replace("_", " ").toLocaleLowerCase()}
+                      </div>
+                      <div
+                        style={{
+                          width: "calc(100% - 10%)",
+                          background: "#1c0113",
+                          textAlign: "center",
+                          position: "absolute",
+                          top: 0,
+                          bottom: 0,
+                        }}
+                      />
+
+                      <div
+                        style={{
+                          width: "10%",
+                          color: "#1c0113",
+
+                          textAlign: "center",
+                          position: "absolute",
+                          top: 0,
+                          bottom: 0,
+                          right: 0,
+                        }}
+                      >
+                        <span>90%</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
+        </div>
       </PageContainer>
-    </Grid>
+    </Section>
   );
 };
 
