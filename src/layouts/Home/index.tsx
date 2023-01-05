@@ -13,7 +13,7 @@ const HomePage = () => {
   const ctx = useContext(HomeContext);
 
   const { technologies, projects, experiences } = JSON.parse(ctx as string);
-  console.log("projects", projects)
+  
   return (
     <Container>
       <Banner />

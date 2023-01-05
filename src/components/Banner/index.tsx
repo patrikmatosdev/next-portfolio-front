@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Container from "./styles";
 import Image from "next/image";
 import BannerJpg from "../../assets/img/banner.jpg";
+import { Button } from "@mui/material";
 
 const Banner = () => {
   return (
@@ -23,8 +24,10 @@ const Banner = () => {
             Olá, me chamo <strong>Patrik Matos</strong>.
           </span>
           <span>Sou um desenvolvedor front-end</span>
-          <button
+          <Button
+            onClick={() => window.open("/curriculo.pdf")}
             style={{
+              textTransform: "capitalize",
               marginTop: 40,
               background: "transparent",
               color: "white",
@@ -35,7 +38,7 @@ const Banner = () => {
             }}
           >
             Baixar currículo
-          </button>
+          </Button>
         </Grid>
       </Grid>
     </Container>

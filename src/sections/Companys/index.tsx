@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Grid } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -7,7 +8,6 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
-import { Grid } from "@mui/material";
 
 export default function Companys({ companys }) {
   return (
