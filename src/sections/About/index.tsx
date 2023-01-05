@@ -66,7 +66,7 @@ const About = ({ technologies }: AboutProps) => {
                         width: "100%",
                         height: 28,
                         position: "relative",
-                        background: "#eee",
+                        background: "#e3c262",
                         marginBottom: 15,
                         display: "flex",
                       }}
@@ -101,8 +101,8 @@ const About = ({ technologies }: AboutProps) => {
                       <div
                         style={{
                           width: "10%",
-                          color: "#1c0113",
-
+                          color: "#fff",
+                          fontWeight: "600",
                           textAlign: "center",
                           position: "absolute",
                           top: 0,
