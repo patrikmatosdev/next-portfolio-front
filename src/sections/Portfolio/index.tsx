@@ -28,7 +28,7 @@ const Portfolio = ({ projects }) => {
   console.log("tabCon", personals);
 
   return (
-    <section style={{ background: "rgba(28,1,19,1)", minHeight: "100vh" }}>
+    <section style={{ background: "rgba(28,1,19,1)", minHeight: "100vh", paddingBottom: 100 }}>
       <PageContainer>
         <div>
           <Title label="< Portfolio >" color="#fff" />

@@ -12,13 +12,18 @@ const Container = styled(Box)(() => {
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
-  height: 400,
+  height: 480,
   width: "33%",
 
-  [theme.breakpoints.down("sm")]: {
-    width: "100% !important", // Overrides inline-style
-    height: 100,
+  "@media(max-width: 1200px)": {
+    width: "50%",
+    height: 380,
   },
+
+  "@media (max-width: 960px)": {
+    width: "100%"
+  },
+
   "&:hover, &.Mui-focusVisible": {
     zIndex: 1,
     "& .MuiImageBackdrop-root": {

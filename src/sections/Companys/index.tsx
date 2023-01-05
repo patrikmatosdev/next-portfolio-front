@@ -8,6 +8,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
+import { Content } from "./styles";
 
 export default function Companys({ companys }) {
   return (
@@ -30,38 +31,51 @@ export default function Companys({ companys }) {
                     <TimelineDot style={{ background: "rgba(28,1,19,0.9)" }} />
                     {key !== companys.length - 1 && <TimelineConnector />}
                   </TimelineSeparator>
-                  <TimelineContent
+                  <Content
                     display="flex"
                     flexDirection="column"
                     style={{ paddingBottom: 24 }}
                   >
-                    <strong>
+                    <strong style={{ fontSize: "12pt" }}>
                       {company.dateStart} - {company.dateEnd}
                     </strong>
-                    <span>{company.code}</span>
-                    <span>{company.company}</span>
-                    <span>
+                    <span style={{ fontSize: "12pt" }}>{company.code}</span>
+                    <span style={{ fontSize: "12pt" }}>{company.company}</span>
+                    <span style={{ fontSize: "12pt" }}>
                       {company.location.city} - {company.location.state}
                     </span>
-                  </TimelineContent>
-                  <TimelineContent
-                    style={{ marginBottom: 100, textAlign: "justify" }}
-                  >
-                    <p>{company.description}</p>
-                    <Grid style={{ marginTop: 10 }} container wrap="wrap">
-                      <strong style={{ marginRight: 10 }}>Tecnologias: </strong>
+                  </Content>
+
+                  <Content style={{ marginBottom: 100, textAlign: "justify" }}>
+                    <span style={{ fontSize: "12pt", fontWeight: "lighter" }}>
+                      {company.description}
+                    </span>
+                    <Grid container wrap="wrap">
+                      <span style={{ fontSize: "12pt", fontWeight: "lighter", color: "#000" }}>Tecnologias:</span>
+
                       {company.technologies.map((tec, idx) => {
                         return (
-                          <Grid item key={idx}>
-                            <span>{tec}</span>
+                          <>
+                            <span
+                              style={{
+                                fontSize: "12pt",
+                                fontWeight: "lighter",
+                              }}
+                            >
+                              {tec}
+                            </span>
                             {idx !== company.technologies.length - 1 && (
-                              <span style={{ marginRight: 10 }}>-</span>
+                              <span
+                                style={{ margin: "0px 2px", fontSize: "12pt" }}
+                              >
+                                -
+                              </span>
                             )}
-                          </Grid>
+                          </>
                         );
                       })}
                     </Grid>
-                  </TimelineContent>
+                  </Content>
                 </TimelineItem>
               );
             })}

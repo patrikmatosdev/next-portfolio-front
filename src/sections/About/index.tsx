@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getImage } from "../../utils/utils";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
-import { Section, SliderTec } from "./styles";
+import { BannerImage, ImageContainer, Section, SliderTec } from "./styles";
 import { AboutProps } from "./types";
 import AboutImage from "../../assets/img/about.svg";
 import Stack from "@mui/material/Stack";
@@ -18,21 +18,17 @@ const About = ({ technologies }: AboutProps) => {
             <Title label="<Sobre>" />
           </Grid>
           <Grid container style={{ position: "relative" }}>
-            <Grid item xl={6} sm={6} lg={6} xs={6} md={6}>
-              <Image
-                src={AboutImage}
-                style={{ width: "calc(100% + 10%)", bottom: 0 }}
-                alt="sobre"
-              />
-            </Grid>
+            <ImageContainer item xl={6} sm={12} lg={6} xs={12} md={12}>
+              <BannerImage src={AboutImage} alt="sobre" />
+            </ImageContainer>
             <Grid
               style={{ padding: "0px", zIndex: 99 }}
               item
               xl={6}
-              sm={6}
+              sm={12}
               lg={6}
-              xs={6}
-              md={6}
+              xs={12}
+              md={12}
             >
               <strong
                 style={{
@@ -57,7 +53,7 @@ const About = ({ technologies }: AboutProps) => {
                 experiência em projetos gerenciados por Metodologias Ágeis.
                 Formado em técnico em informática para internet.
               </p>
-              <Grid container paddingTop={10}>
+              <Grid container>
                 {technologies?.map((tec, key) => {
                   return (
                     <div
@@ -111,9 +107,7 @@ const About = ({ technologies }: AboutProps) => {
                           right: 0,
                         }}
                       >
-                        <span style={{ color: "#fff" }}>
-                          {tec.percent}%
-                        </span>
+                        <span style={{ color: "#fff" }}>{tec.percent}%</span>
                       </div>
                     </div>
                   );

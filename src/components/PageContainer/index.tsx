@@ -13,6 +13,14 @@ const Container = styled(Grid)(() => {
     height: "100% !important",
     background: "transpartent",
     padding: 30,
+
+
+    "@media (max-width: 1299px)": {
+      maxWidth: "100%",
+      width: "100%",
+      padding: 15,
+    }
+
   };
 });
 

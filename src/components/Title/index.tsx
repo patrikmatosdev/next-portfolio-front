@@ -13,6 +13,11 @@ const Container = styled("div")(() => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+
+    "@media(max-width: 960px)": {
+      padding: "60px 0px"
+    }
+
   };
 });
 
