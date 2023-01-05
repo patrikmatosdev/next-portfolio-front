@@ -75,6 +75,7 @@ const About = ({ technologies }: AboutProps) => {
                         style={{
                           width: 200,
                           background: "#2b1724",
+                          opacity: 6,
                           color: "white",
                           paddingLeft: 10,
                           position: "absolute",
@@ -101,8 +102,8 @@ const About = ({ technologies }: AboutProps) => {
                       <div
                         style={{
                           width: "10%",
-                          color: "#fff",
-                          fontWeight: "600",
+
+                          fontWeight: "500",
                           textAlign: "center",
                           position: "absolute",
                           top: 0,
@@ -110,7 +111,9 @@ const About = ({ technologies }: AboutProps) => {
                           right: 0,
                         }}
                       >
-                        <span>{tec.percent}%</span>
+                        <span style={{ color: "#fff" }}>
+                          {tec.percent}%
+                        </span>
                       </div>
                     </div>
                   );
