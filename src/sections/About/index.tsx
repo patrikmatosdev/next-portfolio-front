@@ -89,7 +89,7 @@ const About = ({ technologies }: AboutProps) => {
                       </div>
                       <div
                         style={{
-                          width: "calc(100% - 10%)",
+                          width: `calc(${tec.percent}%)`,
                           background: "#1c0113",
                           textAlign: "center",
                           position: "absolute",
@@ -110,7 +110,7 @@ const About = ({ technologies }: AboutProps) => {
                           right: 0,
                         }}
                       >
-                        <span>90%</span>
+                        <span>{tec.percent}%</span>
                       </div>
                     </div>
                   );
