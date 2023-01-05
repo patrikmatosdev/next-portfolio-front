@@ -34,14 +34,13 @@ export default function Companys({ companys }) {
                   <Content
                     display="flex"
                     flexDirection="column"
-                    style={{ paddingBottom: 24 }}
                   >
                     <strong style={{ fontSize: "12pt" }}>
                       {company.dateStart} - {company.dateEnd}
                     </strong>
-                    <span style={{ fontSize: "12pt" }}>{company.code}</span>
-                    <span style={{ fontSize: "12pt" }}>{company.company}</span>
-                    <span style={{ fontSize: "12pt" }}>
+                    <span style={{ fontSize: "11pt", fontWeight: "lighter", }}>{company.code}</span>
+                    <span style={{ fontSize: "11pt", fontWeight: "lighter",}}>{company.company}</span>
+                    <span style={{ fontSize: "11pt", fontWeight: "lighter", }}>
                       {company.location.city} - {company.location.state}
                     </span>
                   </Content>
