@@ -3,29 +3,30 @@ import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
 import { useState } from "react";
 import ProjectsBar from "../../components/ProjectsBar";
+import { PortfolioProps } from "./types";
 
-const Portfolio = ({ projects }) => {
+const Portfolio = ({ projects }: PortfolioProps) => {
   const [tabContent, setTabContent] = useState(0);
 
-  const personals = projects.filter(
+  const personals = projects?.filter(
     (p) =>
       p.company.toLowerCase() === "pessoal" && {
-        id: p.id,
+        id: p.index,
         img: p.img,
         code: p.company,
       }
   );
 
-  const participatives = projects.filter(
+  const participatives = projects?.filter(
     (p) =>
       p.company.toLowerCase() !== "pessoal" && {
-        id: p.id,
+        id: p.index,
         img: p.img,
         code: p.company,
       }
   );
 
-  console.log("tabCon", personals);
+  console.log("tabCon", projects);
 
   return (
     <section style={{ background: "rgba(28,1,19,1)", paddingBottom: 100 }}>

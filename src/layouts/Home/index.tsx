@@ -2,12 +2,10 @@ import React, { useContext } from "react";
 import About from "../../sections/About";
 import Banner from "../../components/Banner";
 import { Container } from "./styles";
-
 import { HomeContext } from "../../contexts/ContextProvider";
 import Footer from "../../sections/Footer";
 import Portfolio from "../../sections/Portfolio";
 import Companys from "../../sections/Companys";
-import Courses from "../../sections/Courses";
 import { Thechnologie } from "../../sections/About/types";
 
 const HomePage = () => {
