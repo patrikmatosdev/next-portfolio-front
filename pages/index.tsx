@@ -13,7 +13,9 @@ function Home() {
     try {
       const res = await axios.get("/next-portfolio-front/api/info");
       setContextState(res.data);
-      setIsloading(false);
+      setTimeout(() => {
+        setIsloading(false);
+      }, 1000);
     } catch (error) {
       setContextState({});
     }
