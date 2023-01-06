@@ -11,7 +11,7 @@ function Home({ ctx }: any) {
 }
 
 Home.getInitialProps = async () => {
-  const res = await fetch("http://localhost:3000/api/info");
+  const res = await fetch("pages/api/info");
   const obj = await res.json();
   console.log("iojb", obj);
   return { ctx: JSON.stringify(obj) };

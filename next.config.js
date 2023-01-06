@@ -3,9 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   distDir: "build",
   images: {
-    loader: "akamai",
-    path: "",
-  }
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
