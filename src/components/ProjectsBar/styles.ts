@@ -1,5 +1,6 @@
 import { Box, ButtonBase } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 
 const Container = styled(Box)(() => {
   return {
@@ -21,7 +22,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   },
 
   "@media (max-width: 960px)": {
-    width: "100%"
+    width: "100%",
   },
 
   "&:hover, &.Mui-focusVisible": {
@@ -81,4 +82,13 @@ const ImageMarked = styled("span")(({ theme }) => ({
   transition: theme.transitions.create("opacity"),
 }));
 
-export { Container, ImageButton, ImageBackdrop, ImageMarked, Image, ImageSrc };
+const Text = styled(Typography)(({ theme }) => {
+  return {
+    position: "relative",
+    p: 4,
+    pt: 2,
+    pb: `calc(${theme.spacing(1)} + 6px)`,
+  };
+});
+
+export { Container, ImageButton, ImageBackdrop, ImageMarked, Image, ImageSrc, Text };

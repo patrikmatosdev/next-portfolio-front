@@ -1,4 +1,4 @@
-import { Box, Tabs, Tab } from "@mui/material";
+import { Box, Tabs, Tab, Container } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
 import { useState } from "react";
@@ -27,14 +27,12 @@ const Portfolio = ({ projects }: PortfolioProps) => {
       }
   );
 
-  console.log("tabCon", projects);
-
   return (
     <Section>
       <PageContainer>
         <div>
           <Title label="< Portfolio >" color="#fff" />
-          <Box sx={{ width: "100%", marginBottom: 3 }}>
+          <Container>
             <Box>
               <Tabs
                 TabIndicatorProps={{ style: { backgroundColor: "#fff" } }}
@@ -45,7 +43,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
                 <ProjectTab value={0} label="Projetos pessoais" />
               </Tabs>
             </Box>
-          </Box>
+          </Container>
           <ProjectsBar
             experiences={tabContent === 0 ? personals : participatives}
           />
