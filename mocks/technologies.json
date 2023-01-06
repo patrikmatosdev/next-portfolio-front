@@ -1,0 +1,69 @@
+{
+  "thecnologies": [
+    {
+      "id": 1,
+      "code": "NODE",
+      "percent": 80
+    },
+    {
+      "id": 2,
+      "code": "JENKINS",
+      "percent": 50
+    },
+    {
+      "id": 3,
+      "code": "NEXTJS",
+      "percent": 90
+    },
+    {
+      "id": 4,
+      "code": "REACT_NATIVE",
+      "percent": 80
+    },
+    {
+      "id": 5,
+      "code": "STORYBOOK",
+      "percent": 80
+    },
+    {
+      "id": 6,
+      "code": "MATERIAL_UI",
+      "percent": 80
+    },
+    {
+      "id": 7,
+      "code": "STYLED_COMPONENTS",
+      "percent": 90
+    },
+    {
+      "id": 8,
+      "code": "GITLAB",
+      "percent": 90
+    },
+    {
+      "id": 9,
+      "code": "JAVASCRIPT",
+      "percent": 90
+    },
+    {
+      "id": 10,
+      "code": "CSS3",
+      "percent": 90
+    },
+    {
+      "id": 11,
+      "code": "HTML5",
+      "percent": 90
+    },
+    {
+      "id": 12,
+      "code": "Redux",
+      "percent": 70
+    },
+    {
+      "id": 12,
+      "code": "Context",
+      "percent": 80
+    }
+  ]
+}
