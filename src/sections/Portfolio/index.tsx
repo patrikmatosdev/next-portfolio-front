@@ -4,6 +4,7 @@ import Title from "../../components/Title";
 import { useState } from "react";
 import ProjectsBar from "../../components/ProjectsBar";
 import { PortfolioProps } from "./types";
+import { ProjectTab, Section } from "./styles";
 
 const Portfolio = ({ projects }: PortfolioProps) => {
   const [tabContent, setTabContent] = useState(0);
@@ -29,29 +30,19 @@ const Portfolio = ({ projects }: PortfolioProps) => {
   console.log("tabCon", projects);
 
   return (
-    <section style={{ background: "rgba(28,1,19,1)", paddingBottom: 100 }}>
+    <Section>
       <PageContainer>
         <div>
           <Title label="< Portfolio >" color="#fff" />
           <Box sx={{ width: "100%", marginBottom: 3 }}>
             <Box>
-              <Tabs value={tabContent} onChange={(_e, n) => setTabContent(n)}>
-                <Tab
-                  value={1}
-                  style={{
-                    color: "#f6f6f6",
-                    textTransform: "none",
-                  }}
-                  label="Projetos participativos"
-                />
-                <Tab
-                  value={0}
-                  style={{
-                    color: "#f6f6f6",
-                    textTransform: "none",
-                  }}
-                  label="Projetos pessoais"
-                />
+              <Tabs
+                TabIndicatorProps={{ style: { backgroundColor: "#fff" } }}
+                value={tabContent}
+                onChange={(_e, n) => setTabContent(n)}
+              >
+                <ProjectTab value={1} label="Projetos participativos" />
+                <ProjectTab value={0} label="Projetos pessoais" />
               </Tabs>
             </Box>
           </Box>
@@ -60,7 +51,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
           />
         </div>
       </PageContainer>
-    </section>
+    </Section>
   );
 };
 
