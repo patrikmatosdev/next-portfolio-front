@@ -4,27 +4,14 @@ import Timeline from "@mui/lab/Timeline";
 import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
 import { Content } from "./styles";
-import { Experience, Location } from "../../../pages/api/info";
-
-interface Company {
-  index: string;
-  code: string;
-  company: string;
-  href: string;
-  location: Location;
-  description: string;
-  dateStart: string;
-  dateEnd: string;
-  technologies: Array<string>;
-}
+import { Experience } from "../../../pages/api/info";
 
 interface CompanyProps {
-  companys?: Array<Company>;
+  companys?: Array<Experience>;
 }
 
 export default function Companys({ companys }: CompanyProps) {
@@ -78,27 +65,31 @@ export default function Companys({ companys }: CompanyProps) {
                         Tecnologias:
                       </span>
 
-                      {company?.technologies?.map((tec, idx) => {
-                        return (
-                          <>
-                            <span
-                              style={{
-                                fontSize: "12pt",
-                                fontWeight: "lighter",
-                              }}
-                            >
-                              {tec}
-                            </span>
-                            {idx !== company?.technologies?.length - 1 && (
+                      {company?.technologies?.length &&
+                        company?.technologies?.map((tec, idx) => {
+                          return (
+                            <>
                               <span
-                                style={{ margin: "0px 2px", fontSize: "12pt" }}
+                                style={{
+                                  fontSize: "12pt",
+                                  fontWeight: "lighter",
+                                }}
                               >
-                                -
+                                {tec}
                               </span>
-                            )}
-                          </>
-                        );
-                      })}
+                              {idx !== company.technologies?.length - 1 && (
+                                <span
+                                  style={{
+                                    margin: "0px 2px",
+                                    fontSize: "12pt",
+                                  }}
+                                >
+                                  -
+                                </span>
+                              )}
+                            </>
+                          );
+                        })}
                     </Grid>
                   </Content>
                 </TimelineItem>

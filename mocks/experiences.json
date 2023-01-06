@@ -5,13 +5,13 @@
       "code": "Opah It Consulting",
       "company": "Desenvolvedor React PL/Sr",
       "href": "https://www.iupp.com.br/",
+      "description": "Atuando no desenvolvimento de uma plataforma Multiparceiros (Programa de parcerias da CVC). Objetivo desta plataforma é um produto aéreo totalmente personalizado no lado do cliente, com possibilidade de efetuar compras através de pontos ou em reais.",
+      "dateStart": "fev 2022",
+      "dateEnd": "atual",
       "location": {
         "state": "SP",
         "city": "São Paulo"
       },
-      "description": "Atuando no desenvolvimento de uma plataforma Multiparceiros (Programa de parcerias da CVC). Objetivo desta plataforma é um produto aéreo totalmente personalizado no lado do cliente, com possibilidade de efetuar compras através de pontos ou em reais.",
-      "dateStart": "fev 2022",
-      "dateEnd": "atual",
       "technologies": [
         "Storybook",
         " TypeScript ",
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "index:": 4,
+      "index": 4,
       "code": "Action Fibra",
       "company": "Analista de Redes",
       "href": "",

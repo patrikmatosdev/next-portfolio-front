@@ -1,20 +1,30 @@
+import axios from "axios";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import ContextProvider from "../src/contexts/ContextProvider";
 import HomePage from "../src/layouts/Home";
 
 function Home({ ctx }: any) {
+  const [contextState, setContextState] = useState({});
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.get("/api/info");
+      setContextState(res.data);
+    } catch (error) {
+      setContextState({});
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <ContextProvider value={ctx}>
+    <ContextProvider value={contextState}>
       <HomePage />
     </ContextProvider>
   );
 }
-
-Home.getInitialProps = async () => {
-  const res = await fetch("pages/api/info");
-  const obj = await res.json();
-  console.log("iojb", obj);
-  return { ctx: JSON.stringify(obj) };
-};
 
 export default Home;

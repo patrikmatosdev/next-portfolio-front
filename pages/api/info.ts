@@ -20,16 +20,16 @@ export interface Experience {
   description?: string;
   dateStart?: string;
   dateEnd?: string;
-  technologies?: Array<string>;
+  technologies: Array<string>;
 }
 
-interface Data {
+export interface Response {
   experiences?: Array<Experience>;
   projects?: Array<Project>;
   technologies?: Array<Thechnologie>;
 }
 
-const response: Data = {
+const response: Response = {
   experiences: MOCK_EXPERIENCES.experiences,
   projects: Projects.projects,
   technologies: technologies.thecnologies,
@@ -37,7 +37,7 @@ const response: Data = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Response>
 ) {
   res.status(200).json(response);
 }
