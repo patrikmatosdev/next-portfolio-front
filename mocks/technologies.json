@@ -54,6 +54,16 @@
       "id": 11,
       "code": "HTML5",
       "percent": 90
+    },
+    {
+      "id": 12,
+      "code": "Redux",
+      "percent": 70
+    },
+    {
+      "id": 12,
+      "code": "Context",
+      "percent": 80
     }
   ]
 }
