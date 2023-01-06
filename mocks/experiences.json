@@ -1,7 +1,7 @@
 {
   "experiences": [
     {
-      "index": 8,
+      "index": 1,
       "code": "Opah It Consulting",
       "company": "Desenvolvedor React PL/Sr",
       "href": "https://www.iupp.com.br/",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "index": 8,
+      "index": 2,
       "code": "Opah It Consulting",
       "company": "Desenvolvedor React PL",
       "href": "https://www.iupp.com.br/",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "index": 8,
+      "index": 3,
       "code": "Opah It Consulting",
       "company": "Desenvolvedor React Jr",
       "href": "https://www.iupp.com.br/",
@@ -77,10 +77,10 @@
       ]
     },
     {
-      "index:": 9,
+      "index:": 4,
       "code": "Action Fibra",
       "company": "Analista de Redes",
-      "href": null,
+      "href": "",
       "dateStart": "jan 2018",
       "dateEnd": "ago 2019",
       "location": {
@@ -101,10 +101,11 @@
       ]
     },
     {
-      "index": 10,
+      "index": 5,
       "code": "Amazonett",
       "company": "Suporte Técnico",
       "dateStart": "fev 2017",
+      "href": "",
       "dateEnd": "nov 2017",
       "location": {
         "state": "AM",
