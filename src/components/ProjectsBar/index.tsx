@@ -18,7 +18,7 @@ export default function ProjectsBar({
     <Container>
       {experiences?.map((experience) => (
         <ImageButton
-          onClick={() => onClickItem?.(experience.id)}
+          onClick={() => onClickItem?.(experience?.id)}
           focusRipple
           key={experience.code}
         >

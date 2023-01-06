@@ -6,12 +6,12 @@ import technologies from "../../mocks/technologies.json";
 import { Thechnologie } from "../../src/sections/About/types";
 import { Project } from "../../src/sections/Portfolio/types";
 
-interface Location {
+export interface Location {
   state?: string;
   city?: string;
 }
 
-interface Experience {
+export interface Experience {
   index?: number;
   code?: string;
   company?: string;

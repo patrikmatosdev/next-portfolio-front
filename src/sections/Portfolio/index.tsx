@@ -11,7 +11,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
 
   const personals = projects?.filter(
     (p) =>
-      p.company.toLowerCase() === "pessoal" && {
+      p?.company?.toLowerCase() === "pessoal" && {
         id: p.index,
         img: p.img,
         code: p.company,
@@ -20,7 +20,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
 
   const participatives = projects?.filter(
     (p) =>
-      p.company.toLowerCase() !== "pessoal" && {
+      p?.company?.toLowerCase() !== "pessoal" && {
         id: p.index,
         img: p.img,
         code: p.company,

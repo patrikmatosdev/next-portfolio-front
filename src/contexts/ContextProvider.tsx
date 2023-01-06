@@ -1,10 +1,11 @@
 import * as React from "react";
+import { Experience } from "../../pages/api/info";
 import { Thechnologie } from "../sections/About/types";
-import { Project } from "../sections/Projects/types";
+import { Project } from "../sections/Portfolio/types";
 
 export interface HomePageProps {
   projects?: Array<Project>;
-  experiences?: Array<Project>;
+  experiences?: Array<Experience>;
   thecnologies?: Array<Thechnologie>;
 }
 
