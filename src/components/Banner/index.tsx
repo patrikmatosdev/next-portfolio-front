@@ -1,11 +1,20 @@
-import { Container, Hidden, TextContainer, DonwloadButton } from "./styles";
-import Image from "next/image";
-import BannerJpg from "../../assets/img/banner.jpg";
+import { Grid } from "@mui/material";
+import { Container, Hidden, TextContainer, DonwloadButton, Video } from "./styles";
 
 const Banner = () => {
   return (
     <Container>
-      <Image fill alt={"banner-image"} src={BannerJpg} />
+      <Grid
+        container
+        position="absolute"
+        top={0}
+        bottom={0}
+        width={"100%"}
+        height={"100%"}
+      >
+        <Video src="banner.mp4" loop autoPlay muted />
+      </Grid>
+
       <Hidden container>
         <TextContainer
           direction="column"

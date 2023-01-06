@@ -11,14 +11,14 @@ const Container = styled("div")(() => {
     "& span": {
       fontFamily: "Raleway",
       color: "#fff",
-      fontSize: "32pt",
+      fontSize: "28pt",
       lineHeight: "36pt",
     },
 
     "& strong": {
       fontFamily: "Raleway",
       color: "#fff",
-      fontSize: "32pt",
+      fontSize: "28pt",
       lineHeight: "36pt",
     },
 
@@ -57,7 +57,7 @@ const Hidden = styled(Grid)(() => {
 const TextContainer = styled(Grid)(() => {
   return {
     height: "100vh",
-    background: "rgba(28,1,19,0.9)",
+    background: "rgba(28,1,19,0.6)",
     padding: 15,
   };
 });
@@ -77,7 +77,7 @@ const DonwloadButton = styled(Button)(() => {
       fontSize: "13pt",
       lineHeight: "16pt",
       width: "100%",
-      padding: "15px"
+      padding: "15px",
     },
 
     "@media(max-width: 499px)": {
@@ -86,4 +86,14 @@ const DonwloadButton = styled(Button)(() => {
   };
 });
 
-export { Container, DonwloadButton, Hidden, TextContainer };
+const Video = styled("video")(() => {
+  return {
+    width: "100%",
+    height: "100%",
+    minWidth: "100%",
+    minHeight: "100%",
+    objectFit: "fill",
+  };
+});
+
+export { Container, DonwloadButton, Hidden, TextContainer, Video };
