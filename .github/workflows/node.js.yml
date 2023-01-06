@@ -19,18 +19,17 @@ jobs:
         node-version: [14.x, 16.x, 18.x]
 
     steps:
-    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/checkout@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
     - run: npm run build
     - run: npm export
-  
-    - uses: JamesIves/github-pages-deploy-action@v4
+    
     - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
           branch: gh-pages
           folder: out
