@@ -3,14 +3,17 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import ContextProvider from "../src/contexts/ContextProvider";
 import HomePage from "../src/layouts/Home";
+import PageLoading from "../src/layouts/PageLoding";
 
-function Home({ ctx }: any) {
+function Home() {
+  const [isLoading, setIsloading] = useState(true);
   const [contextState, setContextState] = useState({});
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("/api/info");
+      const res = await axios.get("/next-portfolio-front/api/info");
       setContextState(res.data);
+      setIsloading(false);
     } catch (error) {
       setContextState({});
     }
@@ -22,7 +25,7 @@ function Home({ ctx }: any) {
 
   return (
     <ContextProvider value={contextState}>
-      <HomePage />
+      {isLoading ? <PageLoading isLoading={isLoading} /> : <HomePage />}
     </ContextProvider>
   );
 }
