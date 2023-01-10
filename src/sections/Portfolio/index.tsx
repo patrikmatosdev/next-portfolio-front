@@ -45,8 +45,12 @@ const Portfolio = ({ projects }: PortfolioProps) => {
                 value={tabContent}
                 onChange={(_e, n) => setTabContent(n)}
               >
-                <ProjectTab value={1} label="Projetos participativos" />
-                <ProjectTab value={0} label="Projetos pessoais" />
+                <ProjectTab
+                  style={{ color: "#aaa" }}
+                  value={1}
+                  label="Projetos participativos"
+                />
+                <ProjectTab style={{ color: "#aaa" }} value={0} label="Projetos pessoais" />
               </Tabs>
             </Box>
           </Container>
