@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <ContextProvider value={contextState}>
-      {isLoading ? <PageLoading isLoading={isLoading} /> : <HomePage />}
+       <HomePage isLoading={isLoading} />
     </ContextProvider>
   );
 }

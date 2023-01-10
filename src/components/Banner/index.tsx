@@ -16,7 +16,7 @@ const Banner = ({ isLoading = false }: BannerProps) => {
     <Container>
       <Grid
         container
-        position="absolute"
+        position={isLoading ? "fixed" : "absolute"}
         top={0}
         bottom={0}
         width={"100%"}

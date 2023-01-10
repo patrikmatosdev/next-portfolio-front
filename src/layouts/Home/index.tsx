@@ -9,29 +9,37 @@ import Companys from "../../sections/Companys";
 import { Thechnologie } from "../../sections/About/types";
 import { Response } from "../../../pages/api/info";
 
-const HomePage = () => {
+interface HomeProps {
+  isLoading?: boolean;
+}
+
+const HomePage = ({ isLoading }: HomeProps) => {
   const ctx: Response = useContext(HomeContext);
 
   return (
     <Container>
-      <Banner />
-      <About
-        technologies={ctx?.technologies?.sort(
-          (a: Thechnologie, b: Thechnologie) => {
-            if (a.percent < b.percent) {
-              return 1;
-            }
-            if (a.percent > b.percent) {
-              return -1;
-            }
-            // a must be equal to b
-            return 0;
-          }
-        )}
-      />
-      <Portfolio projects={ctx.projects} />
-      <Companys companys={ctx.experiences} />
-      <Footer />
+      <Banner isLoading={isLoading} />
+      {!isLoading && (
+        <>
+          <About
+            technologies={ctx?.technologies?.sort(
+              (a: Thechnologie, b: Thechnologie) => {
+                if (a.percent < b.percent) {
+                  return 1;
+                }
+                if (a.percent > b.percent) {
+                  return -1;
+                }
+                // a must be equal to b
+                return 0;
+              }
+            )}
+          />
+          <Portfolio projects={ctx.projects} />
+          <Companys companys={ctx.experiences} />
+          <Footer />
+        </>
+      )}
     </Container>
   );
 };

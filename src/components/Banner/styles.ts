@@ -6,7 +6,6 @@ const Container = styled("div")(() => {
     maxWidth: "100%",
     width: "100%",
     height: "100vh",
-    position: "relative",
 
     "& span": {
       fontFamily: "Raleway",
