@@ -18,7 +18,8 @@ export default function ProjectsBar({
     <Container>
       {experiences?.map((experience) => (
         <ImageButton
-          onClick={() => onClickItem?.(experience?.id)}
+          disabled={experience.disabled}
+          onClick={() => window.open(experience?.href)}
           focusRipple
           key={experience.code}
         >

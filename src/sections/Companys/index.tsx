@@ -19,7 +19,7 @@ export default function Companys({ companys }: CompanyProps) {
     <section>
       <PageContainer>
         <div>
-          <Title label="< Experiências />" />
+          <Title label="Experiências" />
           <Timeline
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {

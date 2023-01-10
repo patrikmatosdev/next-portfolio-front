@@ -24,7 +24,7 @@ const About = ({ technologies }: AboutProps) => {
       <PageContainer>
         <div>
           <Grid container justifyContent="center">
-            <Title label="<Sobre>" />
+            <Title label="Sobre" />
           </Grid>
           <Container container>
             <ImageContainer item xl={6} sm={12} lg={6} xs={12} md={12}>

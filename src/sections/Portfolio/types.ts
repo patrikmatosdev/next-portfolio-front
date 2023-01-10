@@ -6,6 +6,7 @@ export type Project = {
   img?: string;
   description?: string;
   id?: number | string;
+  disabled?: boolean;
 };
 
 export interface PortfolioProps {

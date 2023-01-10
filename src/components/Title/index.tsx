@@ -40,7 +40,7 @@ const Bottom = styled(Divider)(({ color }) => {
 const Title = ({ label, color }: TitleProps) => {
   return (
     <Container>
-      <Label color={color}>{label}</Label>
+      <Label color={color}>{`< ${label} />`}</Label>
       <Bottom color={color} />
     </Container>
   );

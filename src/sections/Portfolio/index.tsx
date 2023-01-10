@@ -15,6 +15,8 @@ const Portfolio = ({ projects }: PortfolioProps) => {
         id: p.index,
         img: p.img,
         code: p.company,
+        disabled: p.disabled,
+        href: p.href,
       }
   );
 
@@ -24,6 +26,8 @@ const Portfolio = ({ projects }: PortfolioProps) => {
         id: p.index,
         img: p.img,
         code: p.company,
+        disabled: p.disabled,
+        href: p.href,
       }
   );
 
@@ -31,11 +35,13 @@ const Portfolio = ({ projects }: PortfolioProps) => {
     <Section>
       <PageContainer>
         <div>
-          <Title label="< Portfolio >" color="#fff" />
+          <Title label="Portfólio" color="#fff" />
           <Container>
             <Box>
               <Tabs
-                TabIndicatorProps={{ style: { backgroundColor: "#fff" } }}
+                TabIndicatorProps={{
+                  style: { backgroundColor: "#fff" },
+                }}
                 value={tabContent}
                 onChange={(_e, n) => setTabContent(n)}
               >
