@@ -22,7 +22,7 @@ const Banner = ({ isLoading = false }: BannerProps) => {
         width={"100%"}
         height={"100%"}
       >
-        <Video src="/next-portfolio-front/banner.mp4" loop autoPlay muted />
+        <Video src="banner.mp4" loop autoPlay muted />
       </Grid>
 
       <Hidden container>

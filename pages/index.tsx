@@ -11,7 +11,7 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("/next-portfolio-front/api/info");
+      const res = await axios.get("/api/info");
       setContextState(res.data);
       setTimeout(() => {
         setIsloading(false);
