@@ -57,7 +57,7 @@ export default function Companys({ companys }: CompanyProps) {
                             <>
                               <Span>{tec}</Span>
                               {idx !== company.technologies?.length - 1 && (
-                                <Span>-</Span>
+                                <Span>&nbsp;-&nbsp;</Span>
                               )}
                             </>
                           );
