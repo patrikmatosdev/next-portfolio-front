@@ -23,8 +23,7 @@ const Container = styled("div")(() => {
 
 const Label = styled("h2")(({ color }) => {
   return {
-    fontSize: "30pt",
-    fontWeight: "lighter",
+    fontSize: "26pt",
     color: color || "#1c0113",
   };
 });
