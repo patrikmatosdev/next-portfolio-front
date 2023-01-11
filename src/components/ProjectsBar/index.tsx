@@ -21,7 +21,7 @@ export default function ProjectsBar({
           disabled={experience.disabled}
           onClick={() => window.open(experience?.href)}
           focusRipple
-          key={experience.code}
+          key={experience.code} 
         >
           <ImageSrc style={{ backgroundImage: `url(${experience.img})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />

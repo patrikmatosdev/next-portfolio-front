@@ -7,7 +7,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineDot from "@mui/lab/TimelineDot";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
-import { Content } from "./styles";
+import { Code, Content, Dates } from "./styles";
 import { Experience } from "../../../pages/api/info";
 
 interface CompanyProps {
@@ -36,18 +36,18 @@ export default function Companys({ companys }: CompanyProps) {
                     {key !== companys?.length - 1 && <TimelineConnector />}
                   </TimelineSeparator>
                   <Content display="flex" flexDirection="column">
-                    <strong style={{ fontSize: "12pt" }}>
+                    <Dates>
                       {company.dateStart} - {company.dateEnd}
-                    </strong>
-                    <span style={{ fontSize: "11pt", fontWeight: "lighter" }}>
+                    </Dates>
+                    <Code>
                       {company.code}
-                    </span>
-                    <span style={{ fontSize: "11pt", fontWeight: "lighter" }}>
+                    </Code>
+                    <Code>
                       {company.company}
-                    </span>
-                    <span style={{ fontSize: "11pt", fontWeight: "lighter" }}>
+                    </Code>
+                    <Code>
                       {company?.location?.city} - {company?.location?.state}
-                    </span>
+                    </Code>
                   </Content>
 
                   <Content style={{ marginBottom: 100, textAlign: "justify" }}>

@@ -5,4 +5,16 @@ const Content = styled(TimelineContent)(() => {
   return {};
 });
 
-export { Content };
+const Dates = styled("strong")(() => {
+  return {
+    fontSize: "12pt",
+  };
+});
+
+const Code = styled("span")(() => {
+  return {
+    fontSize: "11pt",
+  };
+});
+
+export { Content, Dates, Code};
