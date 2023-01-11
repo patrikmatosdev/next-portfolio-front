@@ -23,8 +23,8 @@ const ImageCol = styled(Grid)(() => {
 
 const Subtitle = styled("strong")(() => {
   return {
-    fontSize: "16pt",
-    fontWeight: "lighter",
+    fontSize: "15pt",
+    color: "#1c0113",
   };
 });
 
@@ -32,7 +32,6 @@ const Text = styled("p")(() => {
   return {
     margin: "20px 0px",
     fontSize: "12pt",
-    fontWeight: "lighter",
     textAlign: "justify",
   };
 });
