@@ -7,7 +7,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineDot from "@mui/lab/TimelineDot";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
-import { Code, Content, Dates } from "./styles";
+import { Span, Content, Dates } from "./styles";
 import { Experience } from "../../../pages/api/info";
 
 interface CompanyProps {
@@ -39,53 +39,25 @@ export default function Companys({ companys }: CompanyProps) {
                     <Dates>
                       {company.dateStart} - {company.dateEnd}
                     </Dates>
-                    <Code>
-                      {company.code}
-                    </Code>
-                    <Code>
-                      {company.company}
-                    </Code>
-                    <Code>
+                    <Span>{company.code}</Span>
+                    <Span>{company.company}</Span>
+                    <Span>
                       {company?.location?.city} - {company?.location?.state}
-                    </Code>
+                    </Span>
                   </Content>
 
                   <Content style={{ marginBottom: 100, textAlign: "justify" }}>
-                    <span style={{ fontSize: "12pt", fontWeight: "lighter" }}>
-                      {company?.description}
-                    </span>
+                    <Span>{company?.description}</Span>
                     <Grid container wrap="wrap">
-                      <span
-                        style={{
-                          fontSize: "12pt",
-                          fontWeight: "lighter",
-                          color: "#000",
-                        }}
-                      >
-                        Tecnologias:
-                      </span>
+                      <Span>Tecnologias:&nbsp;</Span>
 
                       {company?.technologies?.length &&
                         company?.technologies?.map((tec, idx) => {
                           return (
                             <>
-                              <span
-                                style={{
-                                  fontSize: "12pt",
-                                  fontWeight: "lighter",
-                                }}
-                              >
-                                {tec}
-                              </span>
+                              <Span>{tec}</Span>
                               {idx !== company.technologies?.length - 1 && (
-                                <span
-                                  style={{
-                                    margin: "0px 2px",
-                                    fontSize: "12pt",
-                                  }}
-                                >
-                                  -
-                                </span>
+                                <Span>-</Span>
                               )}
                             </>
                           );

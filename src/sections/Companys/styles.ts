@@ -11,10 +11,10 @@ const Dates = styled("strong")(() => {
   };
 });
 
-const Code = styled("span")(() => {
+const Span = styled("span")(() => {
   return {
     fontSize: "11pt",
   };
 });
 
-export { Content, Dates, Code};
+export { Content, Dates, Span};
