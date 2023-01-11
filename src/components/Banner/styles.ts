@@ -6,6 +6,8 @@ const Container = styled("div")(() => {
     maxWidth: "100%",
     width: "100%",
     height: "100vh",
+    position: "relative",
+    zIndex: 99,
 
     "& span": {
       fontFamily: "Raleway",
@@ -50,12 +52,14 @@ const Container = styled("div")(() => {
 const Hidden = styled(Grid)(() => {
   return {
     position: "absolute",
+    height: "100%"
   };
 });
 
 const TextContainer = styled(Grid)(() => {
   return {
-    height: "100vh",
+    height: "100%",
+    minHeight: "100%",
     background: "rgba(28,1,19,0.6)",
     padding: 15,
   };
@@ -88,10 +92,8 @@ const DonwloadButton = styled(Button)(() => {
 const Video = styled("video")(() => {
   return {
     width: "100%",
-    height: "100%",
-    minWidth: "100%",
-    minHeight: "100%",
-    objectFit: "fill",
+    height: "100% !important",
+    objectFit: "cover"
   };
 });
 
