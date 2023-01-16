@@ -7,7 +7,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineDot from "@mui/lab/TimelineDot";
 import PageContainer from "../../components/PageContainer";
 import Title from "../../components/Title";
-import { Span, Content, Dates } from "./styles";
+import { Span, Content, Dates, Text } from "./styles";
 import { Experience } from "../../../pages/api/info";
 
 interface CompanyProps {
@@ -56,7 +56,7 @@ export default function Companys({ companys, isMobile = false }: CompanyProps) {
                     </Span>
                     {isMobile && (
                       <div style={{ marginBottom: 50 }}>
-                        <Span>{company?.description}</Span>
+                        <Text>{company?.description}</Text>
                         <Grid container wrap="wrap">
                           <Span>Tecnologias:&nbsp;</Span>
 
@@ -78,7 +78,7 @@ export default function Companys({ companys, isMobile = false }: CompanyProps) {
 
                   {!isMobile && (
                     <Content style={{ marginBottom: 100 }}>
-                      <Span>{company?.description}</Span>
+                      <Text>{company?.description}</Text>
                       <Grid container wrap="wrap">
                         <Span>Tecnologias:&nbsp;</Span>
 

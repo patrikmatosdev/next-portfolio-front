@@ -21,4 +21,12 @@ const Span = styled("span")(() => {
   };
 });
 
-export { Content, Dates, Span};
+const Text = styled("p")(() => {
+  return {
+    fontSize: "10pt",
+    color: "rgba(28,1,19,1)"
+  };
+});
+
+
+export { Content, Dates, Span, Text};
