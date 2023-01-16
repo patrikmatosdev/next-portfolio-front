@@ -8,6 +8,7 @@ import Portfolio from "../../sections/Portfolio";
 import Companys from "../../sections/Companys";
 import { Thechnologie } from "../../sections/About/types";
 import { Response } from "../../../pages/api/info";
+import { useMediaQuery } from "@mui/material";
 
 interface HomeProps {
   isLoading?: boolean;
@@ -15,6 +16,7 @@ interface HomeProps {
 
 const HomePage = ({ isLoading }: HomeProps) => {
   const ctx: Response = useContext(HomeContext);
+  const isMobile = useMediaQuery("(max-width:960px)");
 
   return (
     <Container>
@@ -36,7 +38,7 @@ const HomePage = ({ isLoading }: HomeProps) => {
             )}
           />
           <Portfolio projects={ctx.projects} />
-          <Companys companys={ctx.experiences} />
+          <Companys companys={ctx.experiences} isMobile={isMobile} />
           <Footer />
         </>
       )}

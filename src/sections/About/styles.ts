@@ -65,7 +65,7 @@ const Graphic = styled("div")(() => {
 const TextContainer = styled("div")(() => {
   return {
     width: 200,
-    background: "#2b1724",
+    
     opacity: 6,
     paddingLeft: 10,
     position: "absolute",
@@ -87,7 +87,7 @@ const Label = styled("span")(() => {
 const Bar = styled("div")(({ percent }: BarProp) => {
   return {
     width: `calc(${percent}%)`,
-    background: "#1c0113",
+    background: "#2b1724",
     textAlign: "center",
     position: "absolute",
     top: 0,

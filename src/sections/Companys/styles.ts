@@ -7,13 +7,17 @@ const Content = styled(TimelineContent)(() => {
 
 const Dates = styled("strong")(() => {
   return {
-    fontSize: "14pt",
+    fontSize: "13pt",
+    textTransform: "capitalize",
+    color: "rgba(28,1,19,1)"
   };
 });
 
 const Span = styled("span")(() => {
   return {
-    fontSize: "12pt",
+    fontSize: "10pt",
+    textTransform: "capitalize",
+    color: "rgba(28,1,19,1)"
   };
 });
 

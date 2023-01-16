@@ -21,6 +21,7 @@ export interface Experience {
   dateStart?: string;
   dateEnd?: string;
   technologies: Array<string>;
+  img?: string;
 }
 
 export interface Response {

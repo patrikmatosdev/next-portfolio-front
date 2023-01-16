@@ -12,9 +12,10 @@ import { Experience } from "../../../pages/api/info";
 
 interface CompanyProps {
   companys?: Array<Experience>;
+  isMobile?: boolean;
 }
 
-export default function Companys({ companys }: CompanyProps) {
+export default function Companys({ companys, isMobile = false }: CompanyProps) {
   return (
     <section>
       <PageContainer>
@@ -32,8 +33,17 @@ export default function Companys({ companys }: CompanyProps) {
               return (
                 <TimelineItem key={key}>
                   <TimelineSeparator>
-                    <TimelineDot style={{ background: "rgba(28,1,19,0.9)" }} />
-                    {key !== companys?.length - 1 && <TimelineConnector />}
+                    <img
+                      src={company.img}
+                      alt={company.code}
+                      width={90}
+                      height={100}
+                    />
+                    {key !== companys?.length - 1 && (
+                      <TimelineConnector
+                        style={{ background: "rgba(28,1,19,1)" }}
+                      />
+                    )}
                   </TimelineSeparator>
                   <Content display="flex" flexDirection="column">
                     <Dates>
@@ -44,26 +54,48 @@ export default function Companys({ companys }: CompanyProps) {
                     <Span>
                       {company?.location?.city} - {company?.location?.state}
                     </Span>
+                    {isMobile && (
+                      <div style={{ marginBottom: 50 }}>
+                        <Span>{company?.description}</Span>
+                        <Grid container wrap="wrap">
+                          <Span>Tecnologias:&nbsp;</Span>
+
+                          {company?.technologies?.length &&
+                            company?.technologies?.map((tec, idx) => {
+                              return (
+                                <>
+                                  <Span>{tec}</Span>
+                                  {idx !== company.technologies?.length - 1 && (
+                                    <Span>&nbsp;-&nbsp;</Span>
+                                  )}
+                                </>
+                              );
+                            })}
+                        </Grid>
+                      </div>
+                    )}
                   </Content>
 
-                  <Content style={{ marginBottom: 100, textAlign: "justify" }}>
-                    <Span>{company?.description}</Span>
-                    <Grid container wrap="wrap">
-                      <Span>Tecnologias:&nbsp;</Span>
+                  {!isMobile && (
+                    <Content style={{ marginBottom: 100 }}>
+                      <Span>{company?.description}</Span>
+                      <Grid container wrap="wrap">
+                        <Span>Tecnologias:&nbsp;</Span>
 
-                      {company?.technologies?.length &&
-                        company?.technologies?.map((tec, idx) => {
-                          return (
-                            <>
-                              <Span>{tec}</Span>
-                              {idx !== company.technologies?.length - 1 && (
-                                <Span>&nbsp;-&nbsp;</Span>
-                              )}
-                            </>
-                          );
-                        })}
-                    </Grid>
-                  </Content>
+                        {company?.technologies?.length &&
+                          company?.technologies?.map((tec, idx) => {
+                            return (
+                              <>
+                                <Span>{tec}</Span>
+                                {idx !== company.technologies?.length - 1 && (
+                                  <Span>&nbsp;-&nbsp;</Span>
+                                )}
+                              </>
+                            );
+                          })}
+                      </Grid>
+                    </Content>
+                  )}
                 </TimelineItem>
               );
             })}

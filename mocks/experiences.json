@@ -6,6 +6,7 @@
       "company": "Desenvolvedor React PL/Sr",
       "href": "https://www.iupp.com.br/",
       "description": "Atuando no desenvolvimento de uma plataforma Multiparceiros (Programa de parcerias da CVC). Objetivo desta plataforma é um produto aéreo totalmente personalizado no lado do cliente, com possibilidade de efetuar compras através de pontos ou em reais.",
+      "img": "https://media.licdn.cn/dms/image/C4D0BAQGg_PeWkuTlbA/company-logo_200_200/0/1606824863389?e=2159024400&v=beta&t=poQWXSaYigE0bA04S0sFnNZc5joF-KYaPAmF1D_9kkM",
       "dateStart": "fev 2022",
       "dateEnd": "atual",
       "location": {
@@ -31,6 +32,7 @@
       "index": 2,
       "code": "Opah It Consulting",
       "company": "Desenvolvedor React PL",
+      "img": "https://media.licdn.cn/dms/image/C4D0BAQGg_PeWkuTlbA/company-logo_200_200/0/1606824863389?e=2159024400&v=beta&t=poQWXSaYigE0bA04S0sFnNZc5joF-KYaPAmF1D_9kkM",
       "href": "https://www.iupp.com.br/",
       "location": {
         "state": "SP",
@@ -58,6 +60,7 @@
       "index": 3,
       "code": "Opah It Consulting",
       "company": "Desenvolvedor React Jr",
+      "img": "https://media.licdn.cn/dms/image/C4D0BAQGg_PeWkuTlbA/company-logo_200_200/0/1606824863389?e=2159024400&v=beta&t=poQWXSaYigE0bA04S0sFnNZc5joF-KYaPAmF1D_9kkM",
       "href": "https://www.iupp.com.br/",
       "location": {
         "state": "SP",
@@ -79,6 +82,7 @@
     {
       "index": 4,
       "code": "Action Fibra",
+      "img": "https://play-lh.googleusercontent.com/EtJ-b8pbXf_BrwFTteVSVobI4V4mPoV7eoi_yRQRYShDDK-0--Vwnvp4bmXbCOFTr8c",
       "company": "Analista de Redes",
       "href": "",
       "dateStart": "jan 2018",
@@ -103,6 +107,7 @@
     {
       "index": 5,
       "code": "Amazonett",
+      "img": "https://media.licdn.com/dms/image/C560BAQGrguWEB2P4Tg/company-logo_200_200/0/1640629199461?e=2147483647&v=beta&t=TGvAVhM0b28CqeEW_ENgxAbR540DcGxmu9EvDMySAJk",
       "company": "Suporte Técnico",
       "dateStart": "fev 2017",
       "href": "",
