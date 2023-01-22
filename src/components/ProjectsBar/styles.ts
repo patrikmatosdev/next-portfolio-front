@@ -7,14 +7,14 @@ const Container = styled(Box)(() => {
     display: "flex",
     flexWrap: "wrap",
     width: "100%",
-    justifyContent: "center",
   };
 });
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
-  height: 480,
-  width: "33%",
+  margin: "15px 5px",
+  height: 300,
+  width: 300,
 
   "@media(max-width: 1200px)": {
     width: "50%",
@@ -59,6 +59,7 @@ const Image = styled("span")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   color: theme.palette.common.white,
+  textTransform: "capitalize"
 }));
 
 const ImageBackdrop = styled("span")(({ theme }) => ({
@@ -91,4 +92,12 @@ const Text = styled(Typography)(({ theme }) => {
   };
 });
 
-export { Container, ImageButton, ImageBackdrop, ImageMarked, Image, ImageSrc, Text };
+export {
+  Container,
+  ImageButton,
+  ImageBackdrop,
+  ImageMarked,
+  Image,
+  ImageSrc,
+  Text,
+};

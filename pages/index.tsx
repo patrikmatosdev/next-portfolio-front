@@ -11,8 +11,35 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("/api/info");
-      setContextState(res.data);
+      const resInfo = await axios.get("/api/info");
+      const resGitRepos = await axios.get(
+        "https://api.github.com/users/patrikmatosdev/repos"
+      );
+
+      const projects = resGitRepos.data.map(
+        (
+          repo: {
+            id: number;
+            name: string;
+            html_url: string;
+            description: string;
+          },
+          idx: number
+        ) => {
+          return {
+            index: idx,
+            id: repo.id,
+            code: repo.name.replaceAll("-", " "),
+            company: "PESSOAL",
+            href: repo.html_url,
+            img: "https://t2.tudocdn.net/510706?w=646&h=284",
+            description: repo.description,
+            disabled: false,
+          };
+        }
+      );
+
+      setContextState({ ...resInfo.data, projects });
       setTimeout(() => {
         setIsloading(false);
       }, 1000);
@@ -27,7 +54,7 @@ function Home() {
 
   return (
     <ContextProvider value={contextState}>
-       <HomePage isLoading={isLoading} />
+      <HomePage isLoading={isLoading} />
     </ContextProvider>
   );
 }
