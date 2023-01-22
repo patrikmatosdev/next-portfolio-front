@@ -7,19 +7,4 @@ const Section = styled("section")(() => {
   };
 });
 
-const Container = styled(Box)(() => {
-  return {
-    width: "100%",
-    marginBottom: 3,
-    background: "red",
-  };
-});
-
-const ProjectTab = styled(Tab)(() => {
-  return {
-    color: "#f6f6f6",
-    textTransform: "none",
-  };
-});
-
-export { Section, ProjectTab, Container };
+export { Section };
