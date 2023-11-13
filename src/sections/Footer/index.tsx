@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </IconButton>
             <IconButton
-              onClick={() => window.open("https://wa.me/5511965510544")}
+              onClick={() => window.open("https://wa.me/5511976855306")}
               style={{ margin: 15 }}
             >
               <WhatsAppIcon style={{ fontSize: "38px" }} htmlColor="#fff" />
